@@ -1,5 +1,5 @@
 <script>
-	import { fly, slide } from 'svelte/transition';
+	import { slide, fly, fade } from 'svelte/transition';
 	import Modal from './Modal.svelte';
 	import { expoOut } from 'svelte/easing';
 
@@ -8,8 +8,8 @@
 </script>
 
 {#if show}
-	<!-- <nav transition:fly={{x: 250, opacity: 1}}> -->
-	<nav transition:slide={{ delay: 100, duration: 450, easing: expoOut }}>
+	<!-- slide={{ delay: 100, duration: 450, easing: expoOut }} -->
+	<nav transition:fade={{ delay: 50, duration: 300, easing: expoOut }}>
 		<div>
 			<svg
 				class="closeBtn"
@@ -21,6 +21,8 @@
 				viewBox="0 0 50 50"
 				style=" fill:#f5f5f5;"
 				on:click={() => (show = !show)}
+				in:fly={{ x: 500, duration: 300, easing: expoOut }}
+				out:fly={{ x: -500, duration: 250, easing: expoOut }}
 			>
 				<g>
 					<path
@@ -35,8 +37,18 @@
 				}}>About</button
 			> -->
 		</div>
-		<div><a class="navOpts" href="./" on:click={() => (show = !show)}>HOME</a></div>
-		<div><a class="navOpts" href="/about">ABOUT</a></div>
+		<div>
+			<a class="navOpts" href="./" on:click={() => (show = !show)}>HOME</a>
+		</div>
+		<div>
+			<a class="navOpts" href="/Production" on:click={() => (show = !show)}>MUSIC</a>
+		</div>
+		<div>
+			<a class="navOpts" href="/Photography" on:click={() => (show = !show)}>PHOTOGRAPHY</a>
+		</div>
+		<div>
+			<a class="navOpts" href="/about" on:click={() => (show = !show)}>ABOUT</a>
+		</div>
 	</nav>
 {/if}
 
@@ -52,9 +64,9 @@
 		border-left: 1px solid #aaa;
 		background: #fff;
 		overflow-y: auto;
-		width: 12rem;
+		width: 15rem;
 		background: #181818;
-		opacity: 0.71;
+		opacity: 0.8;
 	}
 	div {
 		align-self: center;

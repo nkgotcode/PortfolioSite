@@ -1,37 +1,48 @@
 <script>
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
-
-	// Import Swiper styles
-	// import 'swiper/css';
-
-	// import 'swiper/css/pagination';
-
-	// import './style.css';
-
-	// import Swiper core and required modules
-	import SwiperCore, { Pagination } from 'swiper';
-
-	import { onMount } from 'svelte';
+	import { onMount, beforeUpdate, afterUpdate } from 'svelte';
 	import 'carbon-components-svelte/css/all.css';
-	import SideBar from '$lib/header/SideBar.svelte';
-	import { draw, fade, fly, blur } from 'svelte/transition';
-	import { expoOut } from 'svelte/easing';
-	// install Swiper modules
-	SwiperCore.use([Pagination]);
 
-	let sidebar_show = false;
-	let visible = true;
+	import { draw, fade, fly, blur, slide } from 'svelte/transition';
+	import { expoOut, quintOut, cubicOut, expoIn, backOut } from 'svelte/easing';
+	import { bind } from 'svelte/internal';
+	import { tweened } from 'svelte/motion';
+	let visible = false;
 	let onLoad = false;
-	let sidebar_duration = 1000;
-	let sidebar_delay = 150;
+	let progress = tweened(0, {
+		duration: 400,
+		easing: expoOut
+	});
+	let src = '/src/assets/@312 no text.png';
 
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 50);
+		setTimeout(() => (onLoad = true), 500);
 	});
 
-	function overlay_click(e) {
-		if ('close' in e.target.dataset) show = false;
+	if (onLoad) {
+		setTimeout(() => (visible = true), 500);
 	}
+
+	// beforeUpdate(() => {
+	// 	scrollHeight = div.scrollHeight;
+	// 	totalHeight = scrollHeight - innerH;
+	// 	progressHeight = (offsetHeight / totalHeight) * 100;
+	// 	autoscroll = div && div.offsetHeight + div.scrollTop > div.scrollHeight - 20;
+	// });
+
+	// afterUpdate(() => {
+	// 	if (autoscroll) div.scrollTo(0, div.scrollHeight);
+	// });
+
+	// window.onscroll = function () {
+	// 	var pos = document.documentElement.scrollTop;
+	// 	var calc_height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	// 	var scroll = (pos * 100) / calc_height;
+	// 	document.getElementById('progress').style.width = scroll + '%';
+	// };
+	// $: {
+	// 	const calc_height = document.documentElement.scrollHeight - window.innerHeight;
+	// 	scroll = (scrollPos * 100) / calc_height;
+	// }
 </script>
 
 <!-- for google fonts -->
@@ -44,87 +55,64 @@
 	/>
 </svelte:head>
 
-<!-- <Swiper
-	class="mySwiper swiper-h"
-	spaceBetween={50}
-	pagination={{
-		clickable: true,
-		type: 'progressbar',
-		el: '.swiper-pagination'
-	}}
->
-	<SwiperSlide
-		style="
-		  background-image: url('/src/assets/@312 no text.png');
-		  background-size: cover;
-		  "
-	> -->
-<div>
-	<div class="wrapper">
-		{#if onLoad && visible && !sidebar_show}
-			<svg
-				class="menuBtn"
-				xmlns="http://www.w3.org/2000/svg"
-				width="50"
-				height="50"
-				viewBox="0 0 50 50"
-				style=" fill:#f5f5f5;"
-				on:click={() => (sidebar_show = !sidebar_show)}
-				in:blur={{ amount: 10 }}
-				out:fade
-			>
-				<g>
-					<path
-						in:draw={{ sidebar_duration, sidebar_delay, expoOut }}
-						d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
-					/>
-				</g>
-			</svg>
-		{/if}
-		<SideBar bind:show={sidebar_show} />
-		{#if onLoad && visible}
-			<h1 in:fly={{ y: 700, duration: 1500 }} out:fade>Hello there,</h1>
-		{/if}
-	</div>
-</div>
+{#if onLoad}
+	<h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
+		Hello there,
+		<br />itsnk
+	</h1>
 
-<!-- </SwiperSlide>
-	<SwiperSlide>
-		<Swiper
-			class="mySwiper2 swiper-v"
-			direction={'vertical'}
-			spaceBetween={50}
-			pagination={{
-				clickable: true,
-				type: 'progressbar',
-				el: '.swiper-pagination'
-			}}
-		>
-			<SwiperSlide>Vertical Slide 1</SwiperSlide>
-			<SwiperSlide>Vertical Slide 2</SwiperSlide>
-			<SwiperSlide>Vertical Slide 3</SwiperSlide>
-		</Swiper>
-	</SwiperSlide>
-	<SwiperSlide>Horizontal Slide 3</SwiperSlide>
-	<SwiperSlide>Horizontal Slide 4</SwiperSlide>
-</Swiper> -->
+	<!-- {#if !visible}
+		{(visible = true)}
+	{/if} -->
+	<img
+		{src}
+		in:fade={{ duration: 500, easing: cubicOut }}
+		out:fly={{ x: -1000, duration: 500, easing: backOut }}
+		alt="img"
+	/>
+{/if}
+
 <style>
 	h1 {
 		color: #f5f5f5;
 		font-family: 'Zen Kurenaido', sans-serif;
 		font-size: 100px;
 		position: absolute;
-		top: 23%;
+		top: 22%;
 		left: 10%;
 	}
-	.menuBtn {
-		position: absolute;
+	/* #progress {
+		display: block;
+		background-color: #f5f5f5;
+		height: 20px;
+		/* width: 100%; 
+		width: var(--width);
+		position: fixed;
 		top: 0;
-		right: 0;
-		padding-right: 50;
+		left: 0;
+	} */
+	img {
+		-webkit-user-drag: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		width: 100%;
+		height: 100%;
 	}
-	.wrapper {
-		/* background: #181818;
-		opacity: 0.9; */
+	#progress {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 20px;
+		height: 100%;
+		/* background: #f5f5f5; */
+	}
+	#progressBar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 20px;
+		height: var(--progressHeight);
+		background: #0f0f0f;
 	}
 </style>

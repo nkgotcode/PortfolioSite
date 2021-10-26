@@ -1,21 +1,26 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	import HomeBackGround from '$lib/header/HomeBackground.svelte';
+	import MenuIcon from '$lib/header/MenuIcon.svelte';
+	import { onMount } from 'svelte';
+
+	$: visible = false;
+	let onLoad = false;
+	$: sidebar_show = false;
+
+	onMount(() => {
+		setTimeout(() => (onLoad = true), 50);
+		setTimeout(() => (visible = true), 1000);
+	});
 </script>
 
-<!-- <Header /> -->
-
 <main>
-	<!-- <nav>
-		<a href=".">HOME</a>
-		<a href="/about">ABOUT</a>
-	</nav> -->
-	<slot />
+	<HomeBackGround>
+		<MenuIcon {sidebar_show} {onLoad} {visible} on:click={() => (sidebar_show = !sidebar_show)} />
+		<slot />
+	</HomeBackGround>
 </main>
 
-<!-- <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer> -->
 <style>
 	main {
 		position: absolute;
@@ -24,17 +29,8 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100%;
-		/* max-width: 1024px; */
 		margin: 0;
 		box-sizing: border-box;
 		background-color: #0f0f0f;
-		background-image: url('/src/assets/@312 no text.png');
-		background-size: cover;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
 	}
 </style>
