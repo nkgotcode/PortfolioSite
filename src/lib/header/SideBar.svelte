@@ -2,12 +2,22 @@
 	import { slide, fly, fade } from 'svelte/transition';
 	import Modal from './Modal.svelte';
 	import { expoOut } from 'svelte/easing';
+	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 
 	export let show = false;
+	export let chosen;
 	let modal_show = false;
+
+	function hideMenu() {
+		menu.set(false);
+		sidebar_show.set(false);
+	}
+	function hideSideBar() {
+		sidebar_show.set(false);
+	}
 </script>
 
-{#if show}
+{#if $sidebar_show}
 	<!-- slide={{ delay: 100, duration: 450, easing: expoOut }} -->
 	<nav transition:fade={{ delay: 50, duration: 300, easing: expoOut }}>
 		<div>
@@ -20,7 +30,7 @@
 				height="50"
 				viewBox="0 0 50 50"
 				style=" fill:#f5f5f5;"
-				on:click={() => (show = !show)}
+				on:click={hideSideBar}
 				in:fly={{ x: 500, duration: 300, easing: expoOut }}
 				out:fly={{ x: -500, duration: 250, easing: expoOut }}
 			>
@@ -38,16 +48,16 @@
 			> -->
 		</div>
 		<div>
-			<a class="navOpts" href="./" on:click={() => (show = !show)}>HOME</a>
+			<a class="navOpts" href="./" on:click={hideMenu}>HOME</a>
 		</div>
 		<div>
-			<a class="navOpts" href="/Production" on:click={() => (show = !show)}>MUSIC</a>
+			<a class="navOpts" href="/Music" on:click={hideMenu}>MUSIC</a>
 		</div>
 		<div>
-			<a class="navOpts" href="/Photography" on:click={() => (show = !show)}>PHOTOGRAPHY</a>
+			<a class="navOpts" href="/Photography" on:click={hideMenu}>PHOTOGRAPHY</a>
 		</div>
 		<div>
-			<a class="navOpts" href="/about" on:click={() => (show = !show)}>ABOUT</a>
+			<a class="navOpts" href="/about" on:click={hideMenu}>ABOUT</a>
 		</div>
 	</nav>
 {/if}

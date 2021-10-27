@@ -24,6 +24,7 @@
     "@lukeed/uuid": "^2.0.0",
     "@sveltejs/svelte-scroller": "^2.0.7",
     "cookie": "^0.4.1",
+    "simple-parallax-js": "^5.6.2",
     "svelte-hamburger": "^0.1.4",
     "swiper": "^7.0.9"
   }

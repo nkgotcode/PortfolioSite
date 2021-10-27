@@ -6,22 +6,20 @@
 	import { expoOut, quintOut, cubicOut, expoIn, backOut } from 'svelte/easing';
 	import { bind } from 'svelte/internal';
 	import { tweened } from 'svelte/motion';
-	let visible = false;
-	let onLoad = false;
-	let progress = tweened(0, {
-		duration: 400,
-		easing: expoOut
-	});
-	let src = '/src/assets/@312 no text.png';
+	import Home from './Home.svelte';
+	import Header from '$lib/header/Header.svelte';
+	import Photography from './Photography.svelte';
+	import About from './about.svelte';
+	import HomeBackGround from '$lib/header/HomeBackground.svelte';
 
+	let src1 = '/src/assets/@312 no text.png';
+	let src2 = '/src/assets/IMG_5566.PNG';
+	let onLoad = false;
+	let offsetHeight;
+	let scrollHeight;
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 500);
 	});
-
-	if (onLoad) {
-		setTimeout(() => (visible = true), 500);
-	}
-
 	// beforeUpdate(() => {
 	// 	scrollHeight = div.scrollHeight;
 	// 	totalHeight = scrollHeight - innerH;
@@ -55,24 +53,24 @@
 	/>
 </svelte:head>
 
+<!-- <section> -->
 {#if onLoad}
-	<h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
-		Hello there,
-		<br />itsnk
-	</h1>
-
-	<!-- {#if !visible}
-		{(visible = true)}
-	{/if} -->
-	<img
-		{src}
-		in:fade={{ duration: 500, easing: cubicOut }}
-		out:fly={{ x: -1000, duration: 500, easing: backOut }}
-		alt="img"
-	/>
+	<HomeBackGround>
+		<h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
+			Hello there,
+			<br />itsnk
+		</h1>
+	</HomeBackGround>
 {/if}
+<!-- </section> -->
 
+<!-- <Home bind:onLoad /> -->
 <style>
+	section {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
 	h1 {
 		color: #f5f5f5;
 		font-family: 'Zen Kurenaido', sans-serif;
@@ -80,39 +78,5 @@
 		position: absolute;
 		top: 22%;
 		left: 10%;
-	}
-	/* #progress {
-		display: block;
-		background-color: #f5f5f5;
-		height: 20px;
-		/* width: 100%; 
-		width: var(--width);
-		position: fixed;
-		top: 0;
-		left: 0;
-	} */
-	img {
-		-webkit-user-drag: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		width: 100%;
-		height: 100%;
-	}
-	#progress {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 20px;
-		height: 100%;
-		/* background: #f5f5f5; */
-	}
-	#progressBar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 20px;
-		height: var(--progressHeight);
-		background: #0f0f0f;
 	}
 </style>

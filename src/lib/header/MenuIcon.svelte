@@ -3,9 +3,9 @@
 	import SideBar from '$lib/header/SideBar.svelte';
 	import { draw, fade, blur, fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
-	export let sidebar_show;
+	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
+	// export let sidebar_show;
 	export let onLoad = false;
-	export let visible = false;
 	let src = '/src/assets/@312 no text.png';
 	let sidebar_duration = 1000;
 	let sidebar_delay = 150;
@@ -13,10 +13,14 @@
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 50);
 	});
+
+	function handleMenuClick() {
+		sidebar_show.set(true);
+	}
 </script>
 
 <div>
-	{#if visible && !sidebar_show}
+	{#if $menu && $sidebar_show == false}
 		<svg
 			class="menuBtn"
 			xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +28,7 @@
 			height="50"
 			viewBox="0 0 50 50"
 			style=" fill:#f5f5f5;"
-			on:click={() => (sidebar_show = !sidebar_show)}
+			on:click={handleMenuClick}
 			in:fly={{ x: 700, duration: 300, easing: expoOut }}
 			out:fly={{ x: -700, duration: 800, easing: expoOut }}
 		>
@@ -36,7 +40,7 @@
 			</g>
 		</svg>
 	{/if}
-	<SideBar bind:show={sidebar_show} bind:visible />
+	<SideBar />
 </div>
 
 <style>
