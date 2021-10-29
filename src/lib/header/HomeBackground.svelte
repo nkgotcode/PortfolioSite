@@ -12,15 +12,15 @@
 		quartIn,
 		expoInOut
 	} from 'svelte/easing';
-	import { menu } from '$lib/header/MenuLoad.js';
+	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 
 	let src = '/src/assets/@312 no text.png';
 	let onLoad = false;
-	let load_menu = false;
+	$: blurry = $sidebar_show;
+
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 300);
 	});
-	// in:fade={{ duration: 700, easing: cubicOut }}
 
 	function loadMenu() {
 		menu.update((n) => true);
@@ -30,11 +30,11 @@
 <div>
 	{#if onLoad}
 		<img
-			class="img1"
+			class:blur={blurry}
 			{src}
 			alt="HomeBackground"
-			in:fly={{ y: 1000, duration: 1000, easing: expoInOut }}
-			out:fly={{ x: -1500, duration: 1500, easing: backOut }}
+			in:fly={{ y: 1000, duration: 1000, easing: cubicOut }}
+			out:fly={{ x: -1500, duration: 1200, easing: backOut }}
 			on:introend={loadMenu}
 		/>
 	{/if}
@@ -47,13 +47,11 @@
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
-	}
-	.img1 {
 		width: 100%;
 		height: auto;
 	}
-	.img2 {
-		width: auto;
-		height: auto;
+	.blur {
+		/* filter: grayscale(80%); */
+		/* filter: drop-shadow(16px 16px 20px red) invert(75%); */
 	}
 </style>

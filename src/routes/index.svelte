@@ -51,6 +51,14 @@
 		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
 		rel="stylesheet"
 	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <!-- <section> -->
@@ -73,10 +81,13 @@
 	}
 	h1 {
 		color: #f5f5f5;
+		/* font-family: 'Open Sans', sans-serif; */
+		/* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
 		font-family: 'Zen Kurenaido', sans-serif;
-		font-size: 100px;
+		font-size: 150px;
 		position: absolute;
 		top: 22%;
 		left: 10%;
+		/* font-weight: 500; */
 	}
 </style>

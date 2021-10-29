@@ -4,10 +4,6 @@
 	import { expoOut } from 'svelte/easing';
 	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 
-	export let show = false;
-	export let chosen;
-	let modal_show = false;
-
 	function hideMenu() {
 		menu.set(false);
 		sidebar_show.set(false);
@@ -18,7 +14,6 @@
 </script>
 
 {#if $sidebar_show}
-	<!-- slide={{ delay: 100, duration: 450, easing: expoOut }} -->
 	<nav transition:fade={{ delay: 50, duration: 300, easing: expoOut }}>
 		<div>
 			<svg
@@ -40,12 +35,6 @@
 					/>
 				</g>
 			</svg>
-			<!-- <button
-				on:click={() => {
-					modal_show = true;
-					show = false;
-				}}>About</button
-			> -->
 		</div>
 		<div>
 			<a class="navOpts" href="./" on:click={hideMenu}>HOME</a>
@@ -62,8 +51,7 @@
 	</nav>
 {/if}
 
-<Modal bind:show={modal_show} />
-
+<!-- <Modal bind:show={modal_show} /> -->
 <style>
 	nav {
 		position: fixed;

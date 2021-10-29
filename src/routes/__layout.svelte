@@ -3,24 +3,19 @@
 	import HomeBackGround from '$lib/header/HomeBackground.svelte';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { onMount } from 'svelte';
-	import { menu } from '$lib/header/MenuLoad.js';
-
-	$: visible = false;
-	let onLoad = false;
-	$: sidebar_show = false;
-	// let menu_show;
-
-	menu.subscribe((value) => {
-		visible = value;
-	});
+	import { sidebar_show } from '$lib/header/MenuLoad.js';
 
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 50);
 	});
+
+	function handleMenuClick() {
+		sidebar_show.set(true);
+	}
 </script>
 
 <main>
-	<MenuIcon {sidebar_show} {onLoad} {visible} on:click={() => (sidebar_show = !sidebar_show)} />
+	<MenuIcon on:click={handleMenuClick} />
 	<slot />
 </main>
 
