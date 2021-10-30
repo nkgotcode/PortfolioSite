@@ -10,11 +10,12 @@
 		backIn,
 		cubicIn,
 		quartIn,
-		expoInOut
+		expoInOut,
+		quartInOut
 	} from 'svelte/easing';
 	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 
-	let src = '/src/assets/@312 no text.png';
+	let src = '/src/assets/@312 no text.jpg';
 	let onLoad = false;
 	$: blurry = $sidebar_show;
 
@@ -33,7 +34,7 @@
 			class:blur={blurry}
 			{src}
 			alt="HomeBackground"
-			in:fly={{ y: 1000, duration: 1000, easing: cubicOut }}
+			in:fly={{ y: 1000, duration: 800, easing: quartInOut }}
 			out:fly={{ x: -1500, duration: 1200, easing: backOut }}
 			on:introend={loadMenu}
 		/>

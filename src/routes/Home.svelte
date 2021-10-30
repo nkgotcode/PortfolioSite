@@ -4,11 +4,15 @@
 	import { draw, fade, fly, blur, slide } from 'svelte/transition';
 	import { expoOut, quintOut, cubicOut, expoIn, backOut } from 'svelte/easing';
 	import Header from '$lib/header/Header.svelte';
+	import { page } from '$app/stores';
+	import { url_path } from '$lib/header/MenuLoad.js';
+	let p = $page.path;
 
 	export let onLoad = false;
 
 	onMount(async () => {
 		setTimeout(() => (onLoad = true), 500);
+		url_path.set(p);
 	});
 </script>
 

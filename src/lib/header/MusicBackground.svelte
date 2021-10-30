@@ -30,7 +30,6 @@
 	function loadMenu() {
 		menu.set(true);
 	}
-	console.log(y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -42,6 +41,7 @@
 			alt="img"
 			in:blur={{ amount: 20, duration: 500, easing: backIn }}
 			out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
+			on:introend={loadMenu}
 		/>
 		<!-- <div class="icon">
 			<svg
@@ -80,7 +80,7 @@
 	</div>
 	<Grid container gutter={12}>
 		<Grid class="grid-text" xs={12} lg={12} lgOffset={0}>
-			{#if y >= 100}
+			{#if y >= 50}
 				<header>
 					<p
 						in:fly={{ x: -1000, duration: 700, opacity: 0, easing: quartInOut }}
@@ -92,10 +92,10 @@
 				</header>
 			{/if}
 
-			{#if y >= 400}
+			{#if y >= 200}
 				<div
 					class="bg-layer"
-					in:fly={{ y: 1000, duration: 1200, opacity: 0, easing: quartInOut }}
+					in:fly={{ y: 1000, duration: 1000, opacity: 0, easing: quartInOut }}
 					out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
 				/>
 			{/if}
@@ -103,13 +103,12 @@
 
 		<Grid container gutter={12}>
 			<Grid xs={12} lg={8} lgOffset={2}>
-				{#if y >= 600}
+				{#if y >= 350}
 					<img
 						src={src1}
 						alt="img"
 						in:fly={{ x: 700, duration: 1000, easing: quartInOut }}
 						out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
-						on:introend={loadMenu}
 					/>
 					<div
 						class="bg-layer2"
@@ -122,7 +121,7 @@
 		</Grid>
 
 		<Grid md={6} lg={8} mdOffset={2}>
-			{#if y >= 900}
+			{#if y >= 500}
 				<EmbeddedSongs />
 			{/if}
 		</Grid>

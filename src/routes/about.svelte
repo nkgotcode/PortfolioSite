@@ -41,6 +41,13 @@
 
 <svelte:head>
 	<title>About</title>
+	<!-- for google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <div class="content" in:fly={{ y: 1000, duration: 500 }} on:introend={loadMenu}>
@@ -50,9 +57,6 @@
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
 		following into your command line and following the prompts:
 	</p>
-
-	<!-- TODO lose the @next! -->
-	<pre>npm init svelte@next</pre>
 
 	<p>
 		The page you're looking at is purely static HTML, with no client-side interactivity needed.
@@ -67,5 +71,17 @@
 		max-width: var(--column-width);
 		margin: var(--column-margin-top) auto 0 auto;
 		color: antiquewhite;
+	}
+	h1,
+	p {
+		align-self: center;
+		color: #f5f5f5;
+		font-family: 'Zen Kurenaido', sans-serif;
+	}
+	p {
+		font-size: 2rem;
+	}
+	h1 {
+		font-size: 3rem;
 	}
 </style>

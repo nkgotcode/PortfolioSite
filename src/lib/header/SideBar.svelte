@@ -2,16 +2,48 @@
 	import { slide, fly, fade } from 'svelte/transition';
 	import Modal from './Modal.svelte';
 	import { expoOut } from 'svelte/easing';
-	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
+	import { menu, sidebar_show, url_path } from '$lib/header/MenuLoad.js';
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+
+	let url;
+	let tmp = $page.path;
+
+	onMount(() => {
+		// url = new URLSearchParams(window.location.href);
+		// url = window.location.href;
+		// url_path.set(tmp);
+		// console.log(url);
+		console.log(tmp);
+	});
+
+	const navItems = [
+		{ label: 'HOME', href: '/' },
+		{ label: 'MUSIC', href: '/Music' },
+		{ label: 'PHOTOGRAPHY', href: '/Photography' },
+		{ label: 'ABOUT', href: '/about' }
+	];
+
+	let clicked_item;
 
 	function hideMenu() {
-		menu.set(false);
+		// let tmp = $page.path;
+		// console.log($page);
+		console.log(url_path);
+		if ($url_path === tmp) {
+		} else {
+			menu.set(false);
+		}
+
 		sidebar_show.set(false);
 	}
 	function hideSideBar() {
 		sidebar_show.set(false);
 	}
 </script>
+
+<!-- {@debug url} -->
+<!-- {@debug clicked_link} -->
 
 {#if $sidebar_show}
 	<nav transition:fade={{ delay: 50, duration: 300, easing: expoOut }}>
@@ -36,18 +68,12 @@
 				</g>
 			</svg>
 		</div>
-		<div>
-			<a class="navOpts" href="./" on:click={hideMenu}>HOME</a>
-		</div>
-		<div>
-			<a class="navOpts" href="/Music" on:click={hideMenu}>MUSIC</a>
-		</div>
-		<div>
-			<a class="navOpts" href="/Photography" on:click={hideMenu}>PHOTOGRAPHY</a>
-		</div>
-		<div>
-			<a class="navOpts" href="/about" on:click={hideMenu}>ABOUT</a>
-		</div>
+
+		{#each navItems as item}
+			<div>
+				<a class="navOpts" href={item.href} on:click={hideMenu}>{item.label}</a>
+			</div>
+		{/each}
 	</nav>
 {/if}
 
@@ -76,10 +102,12 @@
 		right: 0;
 	}
 	.navOpts {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
+		font-weight: 800;
 		padding-top: 1em;
 		padding-bottom: 1rem;
 		align-self: center;
 		color: #f5f5f5;
+		font-family: 'Zen Kurenaido', sans-serif;
 	}
 </style>
