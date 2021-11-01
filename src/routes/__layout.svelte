@@ -1,25 +1,19 @@
 <script>
 	import '../app.css';
-	import HomeBackGround from '$lib/header/HomeBackground.svelte';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { onMount } from 'svelte';
-	import { sidebar_show, url_path } from '$lib/header/MenuLoad.js';
+	import { url_path } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
 
 	let p = $page.path;
 
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 50);
 		url_path.set(p);
 	});
-
-	function handleMenuClick() {
-		sidebar_show.set(true);
-	}
 </script>
 
 <main>
-	<MenuIcon on:click={handleMenuClick} />
+	<!-- <MenuIcon on:click={handleMenuClick} /> -->
 	<slot />
 </main>
 

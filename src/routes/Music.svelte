@@ -1,24 +1,15 @@
 <script>
 	import { draw, fade, blur, fly } from 'svelte/transition';
-	import {
-		expoOut,
-		backInOut,
-		backOut,
-		backIn,
-		quartInOut,
-		cubicIn,
-		expoIn,
-		quartIn
-	} from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import MusicBackground from '$lib/header/MusicBackground.svelte';
 	import EmbeddedSongs from '$lib/header/EmbeddedSongs.svelte';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
-	import MusicContent from '$lib/header/MusicContent.svelte';
-	import { sidebar_show } from '$lib/header/MenuLoad.js';
+	import { sidebar_show, url_path } from '$lib/header/MenuLoad.js';
+	import { page } from '$app/stores';
 	let onLoad = false;
 	onMount(() => {
 		setTimeout(() => (onLoad = true));
+		url_path.set($page.path);
 	});
 	function handleMenuClick() {
 		sidebar_show.set(true);

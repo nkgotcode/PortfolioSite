@@ -1,7 +1,19 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
 	import { menu } from '$lib/header/MenuLoad.js';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
+	import MenuIcon from '$lib/header/MenuIcon.svelte';
+	import { url_path } from '$lib/header/MenuLoad.js';
+	import {
+		expoOut,
+		backInOut,
+		backOut,
+		backIn,
+		quartInOut,
+		cubicIn,
+		expoIn,
+		quartIn
+	} from 'svelte/easing';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -37,6 +49,10 @@
 			}
 		};
 	}
+
+	function handleMenuClick() {
+		sidebar_show.set(true);
+	}
 </script>
 
 <svelte:head>
@@ -50,7 +66,13 @@
 	/>
 </svelte:head>
 
-<div class="content" in:fly={{ y: 1000, duration: 500 }} on:introend={loadMenu}>
+<MenuIcon on:click={handleMenuClick} />
+<div
+	class="content"
+	in:fly={{ y: 1000, duration: 500, easing: quartInOut }}
+	on:introend={loadMenu}
+	out:fade={{ duration: 500, easing: backOut }}
+>
 	<h1>About this app</h1>
 
 	<p>

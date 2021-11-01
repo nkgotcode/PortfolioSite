@@ -1,11 +1,25 @@
 <script>
-	import { draw, fade, blur, fly } from 'svelte/transition';
-	import { expoOut, backInOut, quartInOut, cubicIn, quartIn } from 'svelte/easing';
-	import { onMount } from 'svelte';
-	import { menu, url_path } from '$lib/header/MenuLoad.js';
+	import { draw, fade, blur, fly, crossfade } from 'svelte/transition';
+	import {
+		expoOut,
+		backInOut,
+		quartInOut,
+		cubicIn,
+		quartIn,
+		backIn,
+		expoIn,
+		quadIn,
+		cubicOut,
+		quintOut,
+		quartOut
+	} from 'svelte/easing';
+	import { onMount, onDestroy } from 'svelte';
+	import { menu, url_path, sidebar_show } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
 	import Grid from 'svelte-grid-responsive';
 	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
+	import MenuIcon from '$lib/header/MenuIcon.svelte';
+	import PhotographyHeader from '$lib/header/PhotographyHeader.svelte';
 
 	const image_content = [
 		{ src: '/src/assets/landscape pic 4096x4096.jpg', id: 1 },
@@ -18,16 +32,26 @@
 	];
 
 	let y;
-	// $: console.log(y);
-
+	let p = $page.path;
+	$: console.log(y);
+	let header;
+	let scrollPos;
 	let onLoad = false;
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 300);
-		url_path.set($page.path);
+		setTimeout(() => (onLoad = true), 200);
+		url_path.set(p);
 	});
 	function loadMenu() {
 		menu.set(true);
 	}
+	function handleMenuClick() {
+		sidebar_show.set(true);
+	}
+
+	const [send, receive] = crossfade({
+		duration: 1000,
+		easing: quartInOut
+	});
 </script>
 
 <!-- for google fonts -->
@@ -44,36 +68,42 @@
 
 {#if onLoad}
 	<!-- {#each image_content as img} -->
-	<!-- {#if y > 0} -->
-	<img
-		src={image_content[0].src}
-		alt="img{image_content[0].id}"
-		in:blur={{ amount: 3000, duration: 1000, easing: quartInOut }}
-		on:introend={loadMenu}
-		out:blur={{ amount: 1000, duration: 800, easing: quartInOut }}
-	/>
-	<!-- {/if} -->
-	<!-- {#if y > 0} -->
-	<div>
-		<img
-			src={image_content[1].src}
-			alt="img{image_content[1].id}"
-			in:fly={{ x: 1000, duration: 500, easing: cubicIn }}
-			on:introend={loadMenu}
-			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
-		/>
-		<!-- <p>
-			Taken with both film and digital cameras..
-			<br />Oh yeah, my phone as well
-		</p> -->
+	<!-- <div in:blur={{ amount: 3000, duration: 1000, easing: quartInOut, out:fade  }} /> -->
+	<MenuIcon on:click={handleMenuClick} />
+	{#if y <= 0}
+		<div
+			in:blur={{ delay: 250, amount: 1000, duration: 1000, easing: quartInOut }}
+			out:fade={{ duration: 500, easing: quartOut }}
+		>
+			<img
+				src={image_content[0].src}
+				alt="img{image_content[0].id}"
+				in:send
+				out:receive
+				on:introend={loadMenu}
+			/>
+		</div>
+	{/if}
+	<div in:send out:receive>
+		{#if y > 0}
+			<PhotographyHeader>
+				<h1
+					in:fly={{ x: -500, duration: 1500, easing: quartInOut }}
+					out:fade={{ duration: 500, easing: cubicOut }}
+				>
+					Shots using Nikon digitals and my trusty iPhone. <div class="line-break">
+						<br />I love the 35mm looks, though I don't shoot it as often anymore.
+					</div>
+				</h1>
+			</PhotographyHeader>
+		{/if}
 	</div>
 	<!-- {/if} -->
 	{#if y >= 800}
 		<img
 			src={image_content[2].src}
 			alt="img{image_content[2].id}"
-			in:fly={{ x: 1000, duration: 1000, easing: cubicIn }}
-			on:introend={loadMenu}
+			in:fly={{ x: 1000, duration: 1000, easing: quartInOut }}
 			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
@@ -81,8 +111,7 @@
 		<img
 			src={image_content[3].src}
 			alt="img{image_content[3].id}"
-			in:fly={{ x: -1000, duration: 1000, easing: cubicIn }}
-			on:introend={loadMenu}
+			in:fly={{ x: -700, duration: 1500, easing: quartInOut }}
 			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
@@ -90,17 +119,15 @@
 		<img
 			src={image_content[4].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ x: 1000, duration: 1000, easing: cubicIn }}
-			on:introend={loadMenu}
+			in:fly={{ x: 700, duration: 1500, easing: quartInOut }}
 			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
-	{#if y >= 3800}
+	{#if y >= 3500}
 		<img
 			src={image_content[5].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ x: -1000, duration: 1000, easing: cubicIn }}
-			on:introend={loadMenu}
+			in:fly={{ x: -700, duration: 1500, easing: quartInOut }}
 			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
@@ -108,14 +135,10 @@
 		<img
 			src={image_content[6].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ x: 1000, duration: 1000, easing: cubicIn }}
-			on:introend={loadMenu}
+			in:fly={{ x: 700, duration: 1500, easing: quartInOut }}
 			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
-	<!-- {/if} -->
-	<!-- {/if} -->
-	<!-- {/each} -->
 {/if}
 
 <style>
@@ -123,7 +146,24 @@
 		-webkit-user-drag: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
-		width: 100%;
-		height: 100%;
+		width: auto;
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+	h1 {
+		color: #f5f5f5;
+		font-family: 'Zen Kurenaido', sans-serif;
+		font-size: 10vw;
+		text-align: left justify;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		display: block;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.line-break {
+		text-align: right;
 	}
 </style>

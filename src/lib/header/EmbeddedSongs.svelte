@@ -29,7 +29,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ x: -1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ x: -1000, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -44,7 +44,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ x: -1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ x: -1000, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -59,7 +59,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ x: -1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ x: -1000, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -75,7 +75,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ y: 1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ y: 500, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -90,7 +90,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ y: 1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ y: 500, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -105,7 +105,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ y: 1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ y: 500, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -120,7 +120,7 @@
 					allowfullscreen
 					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
 					allow="clipboard-read; clipboard-write"
-					in:fly={{ y: 1000, duration: 1200, easing: quartInOut }}
+					in:fly={{ y: 500, duration: 2000, easing: quartInOut }}
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
@@ -136,7 +136,7 @@
 		scrolling="no"
 		frameborder="no"
 		allow="autoplay"
-		in:fly={{ y: 1000, duration: 1000, easing: quartInOut }}
+		in:fly={{ y: 300, duration: 2000, easing: quartInOut }}
 		out:fade={{ duration: 500 }}
 		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/968321977&color=%23080604&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
 	/>
@@ -150,7 +150,7 @@
 				scrolling="no"
 				frameborder="no"
 				allow="autoplay"
-				in:fly={{ y: 1000, duration: 1000, easing: quartInOut }}
+				in:fly={{ y: 300, duration: 2000, easing: quartInOut }}
 				out:fade={{ duration: 500 }}
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1144675411&color=%23080604&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
 			/>
@@ -164,7 +164,7 @@
 				scrolling="no"
 				frameborder="no"
 				allow="autoplay"
-				in:fly={{ y: 1000, duration: 1000, easing: quartInOut }}
+				in:fly={{ y: 300, duration: 2000, easing: quartInOut }}
 				out:fade={{ duration: 500 }}
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/794843016&color=%23101513&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
 			/>

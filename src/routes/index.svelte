@@ -1,25 +1,32 @@
 <script>
 	import { onMount, beforeUpdate, afterUpdate } from 'svelte';
-	import 'carbon-components-svelte/css/all.css';
+	// import 'carbon-components-svelte/css/all.css';
 
 	import { draw, fade, fly, blur, slide } from 'svelte/transition';
 	import { expoOut, quintOut, cubicOut, expoIn, backOut } from 'svelte/easing';
 	import { bind } from 'svelte/internal';
 	import { tweened } from 'svelte/motion';
-	import Home from './Home.svelte';
-	import Header from '$lib/header/Header.svelte';
 	import Photography from './Photography.svelte';
 	import About from './about.svelte';
 	import HomeBackGround from '$lib/header/HomeBackground.svelte';
+	import { page } from '$app/stores';
+	import { url_path, sidebar_show } from '$lib/header/MenuLoad.js';
+	import MenuIcon from '$lib/header/MenuIcon.svelte';
 
 	let src1 = '/src/assets/@312 no text.png';
 	let src2 = '/src/assets/IMG_5566.PNG';
 	let onLoad = false;
 	let offsetHeight;
 	let scrollHeight;
+	let p = $page.path;
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 500);
+		url_path.set(p);
 	});
+
+	function handleMenuClick() {
+		sidebar_show.set(true);
+	}
 	// beforeUpdate(() => {
 	// 	scrollHeight = div.scrollHeight;
 	// 	totalHeight = scrollHeight - innerH;
@@ -61,33 +68,26 @@
 	/>
 </svelte:head>
 
-<!-- <section> -->
 {#if onLoad}
 	<HomeBackGround>
-		<h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
+		<MenuIcon on:click={handleMenuClick} />
+		<!-- <div>
+
+		</div> -->
+		<!-- <h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
 			Hello there,
 			<br />itsnk
-		</h1>
+		</h1> -->
 	</HomeBackGround>
 {/if}
-<!-- </section> -->
 
-<!-- <Home bind:onLoad /> -->
 <style>
-	section {
-		width: 100%;
-		height: 100%;
-		padding: 0;
-	}
-	h1 {
+	/* h1 {
 		color: #f5f5f5;
-		/* font-family: 'Open Sans', sans-serif; */
-		/* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
 		font-family: 'Zen Kurenaido', sans-serif;
 		font-size: 150px;
 		position: absolute;
 		top: 22%;
 		left: 10%;
-		/* font-weight: 500; */
-	}
+	} */
 </style>

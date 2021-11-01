@@ -6,15 +6,14 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	let url;
 	let tmp = $page.path;
+	$: console.log(tmp);
+	$: console.log($url_path);
 
 	onMount(() => {
-		// url = new URLSearchParams(window.location.href);
-		// url = window.location.href;
-		// url_path.set(tmp);
 		// console.log(url);
-		console.log(tmp);
+		// console.log(tmp);
+		url_path.set(tmp);
 	});
 
 	const navItems = [
@@ -29,21 +28,18 @@
 	function hideMenu() {
 		// let tmp = $page.path;
 		// console.log($page);
-		console.log(url_path);
+
 		if ($url_path === tmp) {
+			hideSideBar();
 		} else {
 			menu.set(false);
+			sidebar_show.set(false);
 		}
-
-		sidebar_show.set(false);
 	}
 	function hideSideBar() {
 		sidebar_show.set(false);
 	}
 </script>
-
-<!-- {@debug url} -->
-<!-- {@debug clicked_link} -->
 
 {#if $sidebar_show}
 	<nav transition:fade={{ delay: 50, duration: 300, easing: expoOut }}>
@@ -90,7 +86,8 @@
 		overflow-y: auto;
 		width: 15rem;
 		background: #181818;
-		opacity: 0.8;
+		opacity: 0.86;
+		filter: invert(5%);
 	}
 	div {
 		align-self: center;
