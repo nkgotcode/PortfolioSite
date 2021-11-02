@@ -15,7 +15,7 @@
 	import Image from 'svelte-image';
 	import { onMount } from 'svelte';
 	import { menu } from '$lib/header/MenuLoad.js';
-	let src2 = '/src/assets/IMG_5566.PNG';
+	let src2 = '/IMG_5566.jpg';
 	function loadMenu() {
 		menu.set(true);
 	}
@@ -27,7 +27,7 @@
 		out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
 		on:introend={loadMenu}
 	>
-		<Image src={src2} quality={70} />
+		<Image src={src2} />
 	</div>
 	<!-- <img
 		src={src2}

@@ -5,7 +5,7 @@
 	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 	import Image from 'svelte-image';
 
-	let src = '/src/assets/@312 no text.jpg';
+	let src = '/@312 no text.jpg';
 	let onLoad = false;
 	$: blurry = $sidebar_show;
 

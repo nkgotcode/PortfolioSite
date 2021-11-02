@@ -13,7 +13,8 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>itsnk</title>
+	<link rel="icon" href="/favicon.png" />
 	<!-- for google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
