@@ -138,7 +138,4 @@
 	.page-info {
 		font-size: 4vw;
 	}
-	.plug {
-		font-size: 2vw;
-	}
 </style>
