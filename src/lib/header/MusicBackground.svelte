@@ -7,7 +7,6 @@
 	import MusicHeader from './MusicHeader.svelte';
 	import { menu } from './MenuLoad';
 	import EmbeddedBackground from './EmbeddedBackground.svelte';
-
 	let src1 = '/src/assets/IMG_2049 square.JPG';
 	let src2 = '/src/assets/IMG_5566.PNG';
 	let src3 = '/src/assets/IMG_9037-Exposure 2.JPG';
@@ -15,7 +14,7 @@
 	let onLoad = false;
 	let y;
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 300);
+		setTimeout(() => (onLoad = true), 500);
 	});
 	function loadMenu() {
 		menu.set(true);
@@ -40,8 +39,8 @@
 			stroke-linejoin="miter"
 			fill="none"
 			color="#000000"
-			in:fly={{ y: 1200, duration: 1000, opacity: 0, easing: quartInOut }}
-			out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
+			in:fly={{ y: 2000, duration: 1000, opacity: 0, easing: quartInOut }}
+			out:fade={{ duration: 500, easing: backOut }}
 		>
 			<title id="chevronDownIconTitle">Chevron Down</title> <polyline points="6 10 12 16 18 10" />
 		</svg>
@@ -57,22 +56,22 @@
 				>
 					Check out my latest releases below
 				</p>
-			{/if}
+				<!-- {/if} -->
 
-			{#if y >= 1}
+				<!-- {#if y >= 1} -->
+				<!-- {#if y >= 200} -->
 				<div
 					class="bg-layer"
-					in:fly={{ y: 1000, duration: 1000, opacity: 0, easing: quartInOut }}
+					in:fly={{ y: 200, duration: 1000, opacity: 0, easing: quartInOut }}
 					out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
 				>
-					{#if y >= 200}
-						<img
-							src={src1}
-							alt="img"
-							in:fly={{ x: 700, duration: 1000, easing: quartInOut }}
-							out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
-						/>
-					{/if}
+					<!-- <Image src={src1} /> -->
+					<img
+						src={src1}
+						alt="img"
+						in:fly={{ x: 700, duration: 1000, easing: quartInOut }}
+						out:fly={{ x: -1000, duration: 500, opacity: 0, easing: backOut }}
+					/>
 				</div>
 			{/if}
 		</Grid>

@@ -12,6 +12,16 @@
 	});
 </script>
 
+<svelte:head>
+	<title>About</title>
+	<!-- for google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
 <main>
 	<!-- <MenuIcon on:click={handleMenuClick} /> -->
 	<slot />
@@ -32,5 +42,8 @@
 	:global(body) {
 		background-color: #0f0f0f;
 		color: #0f0f0f;
+	}
+	::-webkit-scrollbar {
+		display: none;
 	}
 </style>
