@@ -13,13 +13,8 @@
 		cubicOut
 	} from 'svelte/easing';
 	const image_content = [
-		{ src: '/src/assets/landscape pic 4096x4096.jpg', id: 1 },
-		{ src: '/dclassic 2021-05-19 124835.997.jpg', id: 2 },
-		{ src: 'src/assets/hoga 2021-06-01 160224.728.jpg', id: 3 },
-		{ src: 'src/assets/hoga 2021-10-03 215931.550.jpg', id: 4 },
-		{ src: 'src/assets/IMG_9553.jpg', id: 5 },
-		{ src: 'src/assets/IMG_9554.jpg', id: 6 },
-		{ src: 'src/assets/IMG_9556.PNG', id: 7 }
+		{ src: '/landscape pic 4096x4096.jpg', id: 1 },
+		{ src: '/dclassic 2021-05-19 124835.997.jpg', id: 2 }
 	];
 </script>
 
@@ -55,10 +50,6 @@
 </div>
 
 <style>
-	/* .header-bg {
-		background-image: url('src/assets/dclassic 2021-05-19 124835.997.jpg');
-		background-size: auto;
-	} */
 	img {
 		max-width: 100%;
 		display: block;

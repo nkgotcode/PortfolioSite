@@ -7,10 +7,7 @@
 	import MusicHeader from './MusicHeader.svelte';
 	import { menu } from './MenuLoad';
 	import EmbeddedBackground from './EmbeddedBackground.svelte';
-	let src1 = '/src/assets/IMG_2049 square.JPG';
-	let src2 = '/src/assets/IMG_5566.PNG';
-	let src3 = '/src/assets/IMG_9037-Exposure 2.JPG';
-	let src4 = '/src/assets/IMG_1662.PNG';
+	let src1 = '/IMG_2049 square.JPG';
 	let onLoad = false;
 	let y;
 	onMount(() => {

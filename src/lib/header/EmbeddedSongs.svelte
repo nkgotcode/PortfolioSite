@@ -18,7 +18,20 @@
 
 	<div>
 		<Grid container gutter={12}>
-			<Grid xs={12} lg={10} lgOffset={1}>
+			<Grid xs={12} lg={6}>
+				<iframe
+					id="frame8"
+					title="songlink"
+					width="100%"
+					height="200"
+					src="https://odesli.co/embed/?url=https%3A%2F%2Falbum.link%2Fs%2F6GGHlWfak2wmf4x1tedWdQ&theme=dark"
+					frameborder="0"
+					allowfullscreen
+					sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox"
+					allow="clipboard-read; clipboard-write"
+				/>
+			</Grid>
+			<Grid xs={12} lg={6}>
 				<iframe
 					id="frame7"
 					title="songlink"
@@ -33,6 +46,7 @@
 					out:fade={{ duration: 500 }}
 				/>
 			</Grid>
+
 			<Grid xs={12} lg={6}>
 				<iframe
 					id="frame1"
