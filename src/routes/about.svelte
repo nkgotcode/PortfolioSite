@@ -76,11 +76,11 @@
 				My name is Lê Nam Khánh. I also go by my initials, NK.
 				<br />
 				<br />
-				I was born and grew up in Hanoi, the capital of Vietnam. In August of 2017, I moved to Chicago
-				to attend the University of Illinois at Chicago. From here, I graduated with a Bachelor of Science
-				in Computer Science in May 2021.
+				I was born and grew up in Hanoi, the capital of Vietnam. I moved to Chicago to attend the University
+				of Illinois, then graduated with a Bachelor of Science in Computer Science in 2021.
 				<br />
-				In my free time, I enjoy making electronic music and taking pictures around the city.
+				During my free time, I enjoy making electronic music, taking pictures around the city, and of
+				course, coding.
 			</p>
 			<br />
 			<h2 in:fly={{ y: 100, duration: 1000, easing: quartInOut }}>📄 About this page</h2>
