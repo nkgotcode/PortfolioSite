@@ -5,7 +5,6 @@
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { url_path, sidebar_show, menu } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
-	import Image from 'svelte-image';
 	import {
 		expoOut,
 		backInOut,
@@ -89,7 +88,18 @@
 				Built with <a href="https://kit.svelte.dev">SvelteKit</a>. The page you're looking at is
 				purely static HTML.
 			</p>
-			<!-- <Image src={'/src/assets/IMG_1662.jpg'} /> -->
+			<h3
+				in:fly={{ y: 100, duration: 1000, easing: quartInOut }}
+				out:fade={{ duration: 500, easing: backOut }}
+				on:introend={loadMenu}
+			>
+				📧 For enquiries: <a
+					href="mailto:me@itsnk.fyi"
+					in:fly={{ x: -100, duration: 1000, easing: quartInOut }}
+				>
+					me@itsnk.fyi
+				</a>
+			</h3>
 		</div>
 	</div>
 {/if}
@@ -121,21 +131,22 @@
 	}
 	h1,
 	h2,
+	h3,
 	p {
 		align-self: center;
 		color: #f5f5f5;
 		font-family: 'Zen Kurenaido', sans-serif;
 	}
-	p {
+	p,
+	a {
 		font-size: 5vw;
 	}
-	h1 {
-		font-size: 7vw;
-	}
-	h2 {
+	h1,
+	h2,
+	h3 {
 		font-size: 7vw;
 	}
 	.page-info {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 </style>
