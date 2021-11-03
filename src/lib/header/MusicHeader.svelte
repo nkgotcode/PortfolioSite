@@ -15,7 +15,8 @@
 	import Image from 'svelte-image';
 	import { onMount } from 'svelte';
 	import { menu } from '$lib/header/MenuLoad.js';
-	let src2 = '/IMG_5566.jpg';
+	// let src2 = '/IMG_5566.jpg';
+	let src2 = '/epcover-05.jpg';
 	function loadMenu() {
 		menu.set(true);
 	}
