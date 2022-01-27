@@ -38,12 +38,5 @@
 {#if onLoad}
 	<HomeBackGround>
 		<MenuIcon on:click={handleMenuClick} />
-		<!-- <div>
-
-		</div> -->
-		<!-- <h1 in:fly={{ y: -1000, duration: 1500 }} out:fly={{ y: 1000, duration: 300 }}>
-			Hello there,
-			<br />itsnk
-		</h1> -->
 	</HomeBackGround>
 {/if}

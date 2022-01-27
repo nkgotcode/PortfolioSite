@@ -1,5 +1,5 @@
 <script>
-	import { draw, fade, blur, fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { backOut, quartInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import Grid from 'svelte-grid-responsive';
@@ -111,7 +111,6 @@
 		width: auto;
 		max-width: 100%;
 		height: auto;
-		/* opacity: 0.4; */
 		filter: invert(5%);
 	}
 	.embedded-bg {
@@ -119,6 +118,5 @@
 		width: auto;
 		max-width: 100%;
 		height: auto;
-		/* filter: invert(7%); */
 	}
 </style>
