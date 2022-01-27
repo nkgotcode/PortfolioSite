@@ -32,7 +32,7 @@
 
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
-	// export const prerender = true;
+	export const prerender = true;
 
 	function loadMenu() {
 		menu.set(true);
@@ -112,7 +112,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center; */
-		background-image: url('/src/assets/IMG_9037-Exposure 2.JPG');
+		background-image: url('/IMG_9037-Exposure 2.webp');
 		background-size: cover;
 	}
 	.content {
@@ -139,7 +139,7 @@
 	}
 	p,
 	a {
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 	h1,
 	h2,
@@ -147,6 +147,6 @@
 		font-size: 7vw;
 	}
 	.page-info {
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 </style>

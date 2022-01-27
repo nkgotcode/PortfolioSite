@@ -5,7 +5,7 @@
 	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 	import Image from 'svelte-image';
 
-	let src = '/@312 no text.jpg';
+	let src = '/@312 no text.webp';
 	let onLoad = false;
 	$: blurry = $sidebar_show;
 
@@ -13,7 +13,7 @@
 	let img_load = false;
 
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 300);
+		setTimeout(() => (onLoad = true));
 	});
 
 	function loadMenu() {
@@ -44,11 +44,11 @@
 		on:introend={loadMenu}
 	/> -->
 	<div
-		in:fly={{ y: 1000, duration: 1000, easing: quartInOut }}
+		in:fly={{ y: 1000, duration: 1200, easing: quartInOut }}
 		out:fly={{ x: -1500, duration: 1200, easing: backOut }}
 		on:introend={loadMenu}
 	>
-		<Image {src} quality={70} />
+		<Image {src} placeholder={false} />
 	</div>
 	{#if img_load}
 		<h1 in:fly={{ y: 50, duration: 700 }} out:fly={{ y: 700, duration: 1000, opacity: 0.2 }}>

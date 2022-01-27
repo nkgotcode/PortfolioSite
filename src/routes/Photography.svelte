@@ -23,12 +23,12 @@
 	import Image from 'svelte-image';
 
 	const image_content = [
-		{ src: '/landscape pic 4096x4096.jpg', id: 1 },
-		{ src: '/dclassic 2021-05-19 124835.997.jpg', id: 2 },
-		{ src: '/hoga 2021-06-01 160224.728.jpg', id: 3 },
-		{ src: '/hoga 2021-10-03 215931.550.jpg', id: 4 },
-		{ src: '/IMG_9553.jpg', id: 5 },
-		{ src: '/IMG_9554.jpg', id: 6 },
+		{ src: '/landscape pic 4096x4096.webp', id: 1 },
+		{ src: '/dclassic 2021-05-19 124835.997.webp', id: 2 },
+		{ src: '/hoga 2021-06-01 160224.728.webp', id: 3 },
+		{ src: '/hoga 2021-10-03 215931.550.webp', id: 4 },
+		{ src: '/IMG_9553.webp', id: 5 },
+		{ src: '/IMG_9554.webp', id: 6 },
 		{ src: '/IMG_9556.PNG', id: 7 }
 	];
 
