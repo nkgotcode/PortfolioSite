@@ -28,7 +28,7 @@
 		out:fly={{ x: -1500, duration: 1200, easing: backOut }}
 		on:introend={loadMenu}
 	>
-		<Image {src} placeholder={false} />
+		<Image {src} />
 	</div>
 	{#if img_load}
 		<h1 in:fly={{ y: 50, duration: 700 }} out:fly={{ y: 700, duration: 1000, opacity: 0.2 }}>

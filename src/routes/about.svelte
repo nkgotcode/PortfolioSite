@@ -1,20 +1,11 @@
 <script>
 	import { onMount } from 'svelte';
-	import { browser, dev } from '$app/env';
+	import { browser } from '$app/env';
 	import { fly, fade } from 'svelte/transition';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { url_path, sidebar_show, menu } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
-	import {
-		expoOut,
-		backInOut,
-		backOut,
-		backIn,
-		quartInOut,
-		cubicIn,
-		expoIn,
-		quartIn
-	} from 'svelte/easing';
+	import { backOut, quartInOut } from 'svelte/easing';
 	let p = $page.path;
 	let onLoad;
 	onMount(() => {
@@ -45,13 +36,6 @@
 
 <svelte:head>
 	<title>itsnk</title>
-	<!-- for google fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 {#if onLoad}
@@ -106,19 +90,13 @@
 
 <style>
 	.bg {
-		/* position: relative;
-		height: 100vh;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center; */
 		background-image: url('/IMG_9037-Exposure 2.webp');
 		background-size: cover;
 	}
 	.content {
 		width: auto;
 		max-width: var(--column-width);
-		color: antiquewhite;
+		color: #faebd7;
 		margin-left: 50px;
 		margin-right: 50px;
 		margin-top: 70px;
@@ -126,7 +104,6 @@
 	a {
 		font-size: 4vw;
 		color: #181818;
-		/* font-weight: bold; */
 		filter: invert(30%);
 	}
 	h1,
@@ -137,8 +114,8 @@
 		color: #f5f5f5;
 		font-family: 'Zen Kurenaido', sans-serif;
 	}
-	p,
-	a {
+	a,
+	p {
 		font-size: 4vw;
 	}
 	h1,

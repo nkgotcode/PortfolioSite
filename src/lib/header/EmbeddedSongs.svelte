@@ -1,15 +1,6 @@
 <script>
-	import { draw, fade, blur, fly } from 'svelte/transition';
-	import {
-		expoOut,
-		backInOut,
-		backOut,
-		backIn,
-		quartInOut,
-		cubicIn,
-		expoIn,
-		quartIn
-	} from 'svelte/easing';
+	import { fade, fly } from 'svelte/transition';
+	import { quartInOut } from 'svelte/easing';
 	import Grid from 'svelte-grid-responsive';
 </script>
 

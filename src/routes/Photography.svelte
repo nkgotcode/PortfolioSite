@@ -1,26 +1,11 @@
 <script>
-	import { draw, fade, blur, fly, crossfade } from 'svelte/transition';
-	import {
-		expoOut,
-		backInOut,
-		quartInOut,
-		cubicIn,
-		quartIn,
-		backIn,
-		expoIn,
-		quadIn,
-		cubicOut,
-		quintOut,
-		quartOut
-	} from 'svelte/easing';
-	import { onMount, onDestroy } from 'svelte';
+	import { blur, fly, crossfade } from 'svelte/transition';
+	import { backInOut, quartInOut, quartOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 	import { menu, url_path, sidebar_show } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
-	import Grid from 'svelte-grid-responsive';
-	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import PhotographyHeader from '$lib/header/PhotographyHeader.svelte';
-	import Image from 'svelte-image';
 
 	const image_content = [
 		{ src: '/landscape pic 4096x4096.webp', id: 1 },
@@ -35,8 +20,6 @@
 	let y;
 	let p = $page.path;
 	$: console.log(y);
-	let header;
-	let scrollPos;
 	let onLoad = false;
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 200);
@@ -54,16 +37,6 @@
 		easing: quartInOut
 	});
 </script>
-
-<!-- for google fonts -->
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
 
 <svelte:window bind:scrollY={y} />
 
@@ -231,8 +204,6 @@
 	}
 	img {
 		-webkit-user-drag: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 		width: auto;
 		display: block;
 		height: auto;

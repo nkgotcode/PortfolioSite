@@ -11,7 +11,7 @@
 	let onLoad = false;
 	let y;
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 500);
+		setTimeout(() => (onLoad = true));
 	});
 	function loadMenu() {
 		menu.set(true);
@@ -101,8 +101,6 @@
 	}
 	img {
 		-webkit-user-drag: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 		width: 100%;
 		height: 100%;
 	}

@@ -1,35 +1,13 @@
 <script>
-	import { draw, fade, blur, fly } from 'svelte/transition';
-	import {
-		expoOut,
-		backInOut,
-		quartInOut,
-		cubicIn,
-		quartIn,
-		backIn,
-		expoIn,
-		quadIn,
-		quartOut,
-		cubicOut
-	} from 'svelte/easing';
+	import { fade, blur, fly } from 'svelte/transition';
+	import { quartInOut, quartOut, cubicOut } from 'svelte/easing';
 	const image_content = [
 		{ src: '/landscape pic 4096x4096.jpg', id: 1 },
 		{ src: '/dclassic 2021-05-19 124835.997.jpg', id: 2 }
 	];
 </script>
 
-<!-- for google fonts -->
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
-
 <div class="header-bg">
-	<!-- <Image src={image_content[1].src} 		 /> -->
 	<img
 		src={image_content[1].src}
 		alt="img{image_content[1].id}"

@@ -18,14 +18,14 @@
 </script>
 
 <!-- for google fonts -->
-<svelte:head>
+<!-- <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
 		rel="stylesheet"
 	/>
-</svelte:head>
+</svelte:head> -->
 
 {#if onLoad}
 	<HomeBackGround>
