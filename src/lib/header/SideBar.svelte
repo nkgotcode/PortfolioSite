@@ -1,6 +1,5 @@
 <script>
-	import { slide, fly, fade } from 'svelte/transition';
-	import Modal from './Modal.svelte';
+	import { fly, fade } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 	import { menu, sidebar_show, url_path } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
@@ -11,8 +10,6 @@
 	$: console.log($url_path);
 
 	onMount(() => {
-		// console.log(url);
-		// console.log(tmp);
 		url_path.set(tmp);
 	});
 
@@ -23,12 +20,7 @@
 		{ label: 'ABOUT', href: '/about' }
 	];
 
-	let clicked_item;
-
 	function hideMenu() {
-		// let tmp = $page.path;
-		// console.log($page);
-
 		if ($url_path === tmp) {
 			hideSideBar();
 		} else {
@@ -73,7 +65,6 @@
 	</nav>
 {/if}
 
-<!-- <Modal bind:show={modal_show} /> -->
 <style>
 	nav {
 		position: fixed;

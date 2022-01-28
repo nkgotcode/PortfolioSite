@@ -1,5 +1,5 @@
 <script>
-	import { onMount, beforeUpdate, afterUpdate } from 'svelte';
+	import { onMount } from 'svelte';
 	import HomeBackGround from '$lib/header/HomeBackground.svelte';
 	import { page } from '$app/stores';
 	import { url_path, sidebar_show } from '$lib/header/MenuLoad.js';
@@ -25,14 +25,14 @@
 		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
 		rel="stylesheet"
 	/>
-	<link
+	<!-- <link
 		href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
 		rel="stylesheet"
 	/>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
 		rel="stylesheet"
-	/>
+	/> -->
 </svelte:head>
 
 {#if onLoad}

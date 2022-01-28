@@ -1,8 +1,6 @@
 <script>
-	import { draw, fade, blur, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import MusicBackground from '$lib/header/MusicBackground.svelte';
-	import EmbeddedSongs from '$lib/header/EmbeddedSongs.svelte';
 	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { sidebar_show, url_path } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';

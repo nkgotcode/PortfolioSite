@@ -1,7 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
 	import SideBar from '$lib/header/SideBar.svelte';
-	import { draw, fade, blur, fly } from 'svelte/transition';
+	import { draw, fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 	import { menu, sidebar_show } from '$lib/header/MenuLoad.js';
 	let sidebar_duration = 1000;
