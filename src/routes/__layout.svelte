@@ -1,6 +1,5 @@
 <script>
 	import '../app.css';
-	import MenuIcon from '$lib/header/MenuIcon.svelte';
 	import { onMount } from 'svelte';
 	import { url_path } from '$lib/header/MenuLoad.js';
 	import { page } from '$app/stores';
@@ -15,20 +14,26 @@
 <svelte:head>
 	<title>itsnk</title>
 	<link rel="icon" href="/favicon.png" />
-	<!-- for google fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-		rel="stylesheet"
-	/>
 </svelte:head>
 <main>
-	<!-- <MenuIcon on:click={handleMenuClick} /> -->
 	<slot />
 </main>
 
 <style>
+	/* zen-kurenaido-regular - latin */
+	@font-face {
+		font-family: 'Zen Kurenaido';
+		font-style: normal;
+		font-weight: 400;
+		src: url('/fonts/zen-kurenaido-v7-latin-regular.eot'); /* IE9 Compat Modes */
+		src: local(''),
+			url('/fonts/zen-kurenaido-v7-latin-regular.eot?#iefix') format('embedded-opentype'),
+			/* IE6-IE8 */ url('/fonts/zen-kurenaido-v7-latin-regular.woff2') format('woff2'),
+			/* Super Modern Browsers */ url('/fonts/zen-kurenaido-v7-latin-regular.woff') format('woff'),
+			/* Modern Browsers */ url('/fonts/zen-kurenaido-v7-latin-regular.ttf') format('truetype'),
+			/* Safari, Android, iOS */ url('/fonts/zen-kurenaido-v7-latin-regular.svg#ZenKurenaido')
+				format('svg'); /* Legacy iOS */
+	}
 	main {
 		position: absolute;
 		flex: 1;

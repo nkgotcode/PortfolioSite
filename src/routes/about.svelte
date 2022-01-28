@@ -9,7 +9,7 @@
 	let p = $page.path;
 	let onLoad;
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 700);
+		setTimeout(() => (onLoad = true), 500);
 		url_path.set(p);
 	});
 
@@ -90,7 +90,7 @@
 
 <style>
 	.bg {
-		background-image: url('/IMG_9037-Exposure 2.webp');
+		background-image: url('/IMG_9037-Exposure 2.jpg');
 		background-size: cover;
 	}
 	.content {
