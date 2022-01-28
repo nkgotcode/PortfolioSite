@@ -8,7 +8,7 @@
 	let onLoad = false;
 	let p = $page.path;
 	onMount(() => {
-		setTimeout(() => (onLoad = true), 500);
+		setTimeout(() => (onLoad = true));
 		url_path.set(p);
 	});
 
@@ -25,14 +25,6 @@
 		href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
 		rel="stylesheet"
 	/>
-	<!-- <link
-		href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
-		rel="stylesheet"
-	/>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
-		rel="stylesheet"
-	/> -->
 </svelte:head>
 
 {#if onLoad}

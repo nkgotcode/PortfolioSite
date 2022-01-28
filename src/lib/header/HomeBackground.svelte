@@ -41,9 +41,6 @@
 <style>
 	:global(img) {
 		-webkit-user-drag: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
 		display: block;
 		max-width: 100%;
 		height: auto;
