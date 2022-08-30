@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 58104539bcd199ae9842d3e9da769c092dc672fa Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661406231 +0700	commit (initial): Initial commit
+58104539bcd199ae9842d3e9da769c092dc672fa 2ddd7990243a42cccaa302511c0665f49550302a Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661768840 +0700	commit: update to next.445 with layout updates
+2ddd7990243a42cccaa302511c0665f49550302a 2c928a02751f6ddff7daa176a2ca17a697b976e0 Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661769889 +0700	commit: change album folder location and some minor tweaks
+2c928a02751f6ddff7daa176a2ca17a697b976e0 0c36264481153f6c2a15ffe9185e08ab501f11f7 Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661788736 +0700	commit: SSG enabled
+0c36264481153f6c2a15ffe9185e08ab501f11f7 f738043feb2f93b28e42895c648dce188c36385a Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661789283 +0700	commit: files managing
+f738043feb2f93b28e42895c648dce188c36385a ad2e6d2fda5b9a6c70ccd7c72e03dfe3743d4fee Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661789851 +0700	commit: turn off SSG for some routes
+ad2e6d2fda5b9a6c70ccd7c72e03dfe3743d4fee 932ebdc17f43f40d8584ff9cefa55262daca5884 Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661790317 +0700	commit: testing SSG
+932ebdc17f43f40d8584ff9cefa55262daca5884 3795d804ad0ec46e8c1f2580d4e4152741420ccf Khanh Le <58643031+nkgotcode@users.noreply.github.com> 1661790846 +0700	commit: minor animation tweaks
