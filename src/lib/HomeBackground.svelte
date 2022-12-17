@@ -7,8 +7,6 @@
 
 	let src = '/@312 no text.webp';
 	let onLoad = false;
-
-	let y;
 	let img_load = false;
 
 	onMount(() => {
@@ -21,7 +19,6 @@
 	}
 </script>
 
-<!-- {#if onLoad} -->
 <div
 	in:fly={{ y: 1000, duration: 800, easing: quartInOut }}
 	out:fade={{ duration: 500, easing: backOut }}
@@ -34,7 +31,6 @@
 		Hello there, itsnk
 	</h1>
 {/if}
-<!-- {/if} -->
 <slot />
 
 <style>

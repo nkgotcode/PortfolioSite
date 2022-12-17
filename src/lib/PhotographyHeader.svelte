@@ -2,7 +2,7 @@
 	import { fade, blur, fly } from 'svelte/transition';
 	import { quartInOut, quartOut, cubicOut } from 'svelte/easing';
 	const image_content = [
-		{ src: '/landscape pic 4096x4096.jpg', id: 1 },
+		{ src: '/landscape pic 2048x2048.jpg', id: 1 },
 		{ src: '/dclassic 2021-05-19 124835.997.jpg', id: 2 }
 	];
 </script>

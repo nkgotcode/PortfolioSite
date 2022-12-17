@@ -24,6 +24,8 @@
 <svelte:head>
 	<title>itsnk</title>
 	<link rel="icon" href="/favicon.png" />
+	<meta charset="UTF-8" />
+	<meta name="description" content="itsnk's Homepage" />
 </svelte:head>
 
 <nav>

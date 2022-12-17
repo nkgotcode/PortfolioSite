@@ -1,6 +1,12 @@
+<script context="module">
+	// since there's no dynamic data here, we can prerender
+	// it so that it gets served as a static asset in prod
+	export const prerender = true;
+</script>
+
 <script>
 	import { onMount } from 'svelte';
-	import { sidebar_show, url_path } from '$lib/MenuLoad.js';
+	import { url_path } from '$lib/MenuLoad.js';
 	import { page } from '$app/stores';
 	import { fly, fade } from 'svelte/transition';
 	import { backOut, expoInOut } from 'svelte/easing';
@@ -12,6 +18,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>itsnk's music</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="itsnk's music" />
+</svelte:head>
+
 {#if onLoad}
 	<div class="background">
 		<div
@@ -19,6 +31,17 @@
 			in:fly={{ y: 700, duration: 1800, easing: expoInOut }}
 			out:fade={{ duration: 500, easing: backOut }}
 		>
+			<div class="photo">
+				<a
+					href="https://songwhip.com/wrenevans/chi%E1%BB%81u-h%C3%B4m-%E1%BA%A5y-anh-th%E1%BA%A5y-m%C3%A0u-%C4%91%E1%BB%8F"
+				>
+					<img src={'/album/CHAATMD.webp'} alt="Chiều Hôm Ấy Anh Thấy Màu Đỏ EP" />
+					<div class="overlay">
+						<div class="title">Chiều Hôm Ấy Anh Thấy Màu Đỏ</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
 			<div class="photo">
 				<a
 					href="
@@ -73,6 +96,15 @@
 				</a>
 			</div>
 			<div class="photo">
+				<a href="https://songwhip.com/itsnk/ahh2021">
+					<img src={'/album/IMG_9037-Exposure 2.jpg'} alt="Ahh - Single" />
+					<div class="overlay">
+						<div class="title">Ahh</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
 				<a
 					href="https://soundcloud.com/itsnk/4x4-in-chicago-summer-20-edition?si=94500f28a87c4b9fbb1110fc0a4d6495&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 				>
@@ -84,10 +116,81 @@
 				</a>
 			</div>
 			<div class="photo">
+				<a href="https://songwhip.com/hairan/control2020">
+					<img src={'/album/Control (feat. Lu & itsnk) - Single.webp'} alt="Control - Single" />
+					<div class="overlay">
+						<div class="title">Control</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/tsl2/l%C3%A0m-vi%E1%BB%87c">
+					<img
+						src={'/album/Làm Việc (feat. Prettyxix & itsnk) - Single.webp'}
+						alt="Làm Việc - Single"
+					/>
+					<div class="overlay">
+						<div class="title">Làm Việc</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/16typh/self-love">
+					<img src={'/album/self love.webp'} alt="Self Love - Single" />
+					<div class="overlay">
+						<div class="title">Self Love</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/khoawzzzy/chuckies-cypher">
+					<img src={'/album/chuckiescypher.webp'} alt="Chuckies Cypher - Single" />
+					<div class="overlay">
+						<div class="title">Chuckies Cypher</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
 				<a href="https://songwhip.com/itsnk/dumb-me">
 					<img src={'/album/DumbMe.webp'} alt="Dumb Mê - Single" />
 					<div class="overlay">
 						<div class="title">Dumb Mê</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://on.soundcloud.com/xs8g7">
+					<img src={'/album/chientinhflip.webp'} alt="Chiện Tình (itsnk flip)" />
+					<div class="overlay">
+						<div class="title">Chiện Tình (itsnk flip)</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a
+					href="https://songwhip.com/haisam/th%C3%B4i-ra-v%C6%B0%E1%BB%9Dn-n%E1%BA%B1m-cho-quen-v%E1%BB%9Bi-m%C3%B9i-%C4%91%E1%BA%A5t"
+				>
+					<img
+						src={'/album/trvncqvmd.webp'}
+						alt="Thôi ra vườn nằm cho quen với mùi đất. - Single"
+					/>
+					<div class="overlay">
+						<div class="title">Thôi ra vườn nằm cho quen với mùi đất.</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/prettyxix2/go-home">
+					<img src={'/album/gohome.webp'} alt="Go Home - Single" />
+					<div class="overlay">
+						<div class="title">Go Home</div>
 						<p class="description" />
 					</div>
 				</a>
@@ -129,6 +232,24 @@
 				</a>
 			</div>
 			<div class="photo">
+				<a href="https://songwhip.com/lilwuyn/freedom-writers">
+					<img src={'/album/timeline.webp'} alt="Freedom Writers - Single" />
+					<div class="overlay">
+						<div class="title">Freedom Writers</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/itsnk/m%E1%BB%99tfile%C3%A2mthanhnh%E1%BB%8Fmp3">
+					<img src={'/album/1fileamthanhnho.webp'} alt="Một File Âm Thanh Nhỏ.mp3 - Single" />
+					<div class="overlay">
+						<div class="title">một file âm thanh nhỏ.mp3</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
 				<a href="https://songwhip.com/itsnk/hello-foolish">
 					<img src={'/album/Hello.webp'} alt="Hello - Single" />
 					<div class="overlay">
@@ -164,16 +285,21 @@
 					</div>
 				</a>
 			</div>
+			<div class="photo">
+				<a href="https://songwhip.com/itsnk/furnish2017">
+					<img src={'/album/Furnish.webp'} alt="Furnish - Single" />
+					<div class="overlay">
+						<div class="title">Furnish</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 {/if}
 
 <style>
-	/* .background {
-		width: inherit;
-	} */
 	.container {
-		/* margin-top: 8px; */
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -214,7 +340,7 @@
 	}
 
 	.title {
-		font-size: 3vw;
+		font-size: 28px;
 		font-weight: 800;
 		align-self: center;
 		justify-content: center;

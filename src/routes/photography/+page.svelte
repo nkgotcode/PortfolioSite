@@ -1,13 +1,17 @@
+<script context="module">
+	// since there's no dynamic data here, we can prerender
+	// it so that it gets served as a static asset in prod
+	export const prerender = true;
+</script>
+
 <script>
 	import { blur, fly, crossfade, fade } from 'svelte/transition';
 	import { backInOut, quartInOut, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
-	// import { url_path } from '$lib/MenuLoad.js';
-	// import { page } from '$app/stores';
 	import PhotographyHeader from '$lib/PhotographyHeader.svelte';
 
 	const image_content = [
-		{ src: '/landscape pic 4096x4096.webp', id: 1 },
+		{ src: '/landscape pic 2048x2048.webp', id: 1 },
 		{ src: '/dclassic 2021-05-19 124835.997.webp', id: 2 },
 		{ src: '/hoga 2021-06-01 160224.728.webp', id: 3 },
 		{ src: '/hoga 2021-10-03 215931.550.webp', id: 4 },
@@ -17,12 +21,9 @@
 	];
 
 	let y;
-	// let p = $page.url.pathname;
-	$: console.log(y);
 	let onLoad = false;
 	onMount(() => {
 		setTimeout(() => (onLoad = true), 200);
-		// url_path.set(p);
 	});
 
 	const [send, receive] = crossfade({
@@ -30,6 +31,12 @@
 		easing: quartInOut
 	});
 </script>
+
+<svelte:head>
+	<title>itsnk's photography section</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="itsnk's photography section" />
+</svelte:head>
 
 <svelte:window bind:scrollY={y} />
 

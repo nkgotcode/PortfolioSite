@@ -28,7 +28,9 @@
 </script>
 
 <svelte:head>
-	<title>itsnk</title>
+	<title>About itsnk</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="About itsnk" />
 </svelte:head>
 
 {#if onLoad}
