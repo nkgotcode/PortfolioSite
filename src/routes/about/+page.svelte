@@ -6,9 +6,8 @@
 
 <script>
 	import { onMount } from 'svelte';
-	// import { browser } from '$app/environment';
 	import { fly, fade, blur } from 'svelte/transition';
-	import { url_path, sidebar_show, menu } from '$lib/MenuLoad.js';
+	import { url_path } from '$lib/MenuLoad.js';
 	import { page } from '$app/stores';
 	import { backOut, quartInOut } from 'svelte/easing';
 	let p = $page.url.pathname;
@@ -88,7 +87,7 @@
 
 <style>
 	.bg {
-		background-image: url('/IMG_9037-Exposure 2.jpg');
+		background-image: url('/IMG_9037-Exposure 2.webp');
 		background-size: cover;
 		height: fit-content;
 	}

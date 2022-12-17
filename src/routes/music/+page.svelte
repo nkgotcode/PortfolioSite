@@ -37,7 +37,7 @@
 				>
 					<img src={'/album/CHAATMD.webp'} alt="Chiều Hôm Ấy Anh Thấy Màu Đỏ EP" />
 					<div class="overlay">
-						<div class="title">Chiều Hôm Ấy Anh Thấy Màu Đỏ</div>
+						<div class="title">Chiều Hôm Ấy Anh Thấy Màu Đỏ EP</div>
 						<p class="description" />
 					</div>
 				</a>
@@ -97,7 +97,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/ahh2021">
-					<img src={'/album/IMG_9037-Exposure 2.jpg'} alt="Ahh - Single" />
+					<img src={'/album/IMG_9037-Exposure 2 2048x2048.jpg'} alt="Ahh - Single" />
 					<div class="overlay">
 						<div class="title">Ahh</div>
 						<p class="description" />
@@ -337,7 +337,7 @@
 	}
 
 	.title {
-		font-size: 28px;
+		font-size: 20px;
 		font-weight: 800;
 		align-self: center;
 		justify-content: center;
