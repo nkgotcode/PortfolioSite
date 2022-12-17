@@ -126,10 +126,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/tsl2/l%C3%A0m-vi%E1%BB%87c">
-					<img
-						src={'/album/Làm Việc (feat. Prettyxix & itsnk) - Single.webp'}
-						alt="Làm Việc - Single"
-					/>
+					<img src={'/album/lamviec.webp'} alt="Làm Việc - Single" />
 					<div class="overlay">
 						<div class="title">Làm Việc</div>
 						<p class="description" />
