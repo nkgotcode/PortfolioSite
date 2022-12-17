@@ -1,6 +1,4 @@
 <script context="module">
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 </script>
 
@@ -16,18 +14,11 @@
 		setTimeout(() => (onLoad = true), 500);
 		url_path.set(p);
 	});
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	// export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	// export const router = browser;
 </script>
 
 <svelte:head>
 	<title>About itsnk</title>
+	<!-- <link rel="icon" href="/favicon.png" /> -->
 	<meta charset="UTF-8" />
 	<meta name="description" content="About itsnk" />
 </svelte:head>
@@ -103,6 +94,7 @@
 		font-size: 4vw;
 		color: #181818;
 		filter: invert(30%);
+		font-display: swap;
 	}
 	h1,
 	h2,
@@ -112,6 +104,7 @@
 		align-self: center;
 		color: #f5f5f5;
 		font-family: 'Raleway', sans-serif;
+		font-display: swap;
 	}
 	a,
 	p {

@@ -34,6 +34,7 @@
 
 <svelte:head>
 	<title>itsnk's photography section</title>
+	<!-- <link rel="icon" href="/favicon.png" /> -->
 	<meta charset="UTF-8" />
 	<meta name="description" content="itsnk's photography section" />
 </svelte:head>
@@ -171,5 +172,6 @@
 		font-family: 'Raleway', sans-serif;
 		font-size: 7vw;
 		text-align: center;
+		font-display: swap;
 	}
 </style>

@@ -1,32 +1,13 @@
 <script>
 	import '../app.css';
-	import { onMount } from 'svelte';
-	// import { url_path } from '$lib/MenuLoad.js';
 	import { page } from '$app/stores';
-	// import { fly, fade } from 'svelte/transition';
-	// import { expoOut } from 'svelte/easing';
-
-	let p = $page.url.pathname;
-	console.log($page);
-
 	const navItems = [
 		{ label: 'HOME', href: '/' },
 		{ label: 'MUSIC', href: '/music' },
 		{ label: 'PHOTOGRAPHY', href: '/photography' },
 		{ label: 'ABOUT', href: '/about' }
 	];
-
-	// onMount(() => {
-	// 	url_path.set(p);
-	// });
 </script>
-
-<svelte:head>
-	<title>itsnk</title>
-	<link rel="icon" href="/favicon.png" />
-	<meta charset="UTF-8" />
-	<meta name="description" content="itsnk's Homepage" />
-</svelte:head>
 
 <nav>
 	<ul>
@@ -49,6 +30,7 @@
 		font-family: 'Raleway';
 		font-style: normal;
 		font-weight: 200;
+		font-display: swap;
 		src: url('/fonts/Raleway-ExtraLight.ttf') format('truetype'); /* IE9 Compat Modes */
 	}
 	main {
@@ -60,7 +42,6 @@
 		height: 100%;
 		margin: 0;
 		box-sizing: border-box;
-		/* background-color: #0f0f0f; */
 		background-color: #000000;
 	}
 	ul {

@@ -38,6 +38,7 @@
 		color: #f5f5f5;
 		font-family: 'Raleway', sans-serif;
 		font-size: 10vw;
+		font-display: swap;
 		text-align: left justify;
 		width: auto;
 		max-width: 100%;

@@ -20,6 +20,7 @@
 
 <svelte:head>
 	<title>itsnk's music</title>
+	<!-- <link rel="icon" href="/favicon.png" /> -->
 	<meta charset="UTF-8" />
 	<meta name="description" content="itsnk's music" />
 </svelte:head>
@@ -341,6 +342,7 @@
 		font-weight: 800;
 		align-self: center;
 		justify-content: center;
+		font-display: swap;
 		color: #f5f5f5;
 		font-family: 'Raleway', sans-serif;
 	}
