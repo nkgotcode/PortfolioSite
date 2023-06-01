@@ -1,7 +1,6 @@
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
-	export const prerender = true;
 	const navItems = [
 		{ label: 'HOME', href: '/' },
 		{ label: 'MUSIC', href: '/music' },
