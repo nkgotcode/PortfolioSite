@@ -55,8 +55,8 @@
 	.navOpts:hover {
 		/* font-size: 3.5vw; */
 		color: rgb(179, 221, 242);
-		border-top-width: 10px;
-		border-top-style: solid;
+		/* border-top-width: 10px;
+		border-top-style: solid; */
 	}
 	.active {
 		color: rgb(179, 221, 242);
