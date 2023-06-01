@@ -34,7 +34,7 @@
 		>
 		<div class="photo">
 			<a
-				href="https://https://umvn.lnk.to/vietkieu"
+				href="https://umvn.lnk.to/vietkieu"
 			>
 				<img src={'/album/VK.webp'} alt="Việt Kiều - Single" />
 				<div class="overlay">
