@@ -32,6 +32,17 @@
 			in:fly={{ y: 700, duration: 1800, easing: expoInOut }}
 			out:fade={{ duration: 500, easing: backOut }}
 		>
+		<div class="photo">
+			<a
+				href="https://https://umvn.lnk.to/vietkieu"
+			>
+				<img src={'/album/VK.webp'} alt="Việt Kiều - Single" />
+				<div class="overlay">
+					<div class="title">Việt Kiều</div>
+					<p class="description" />
+				</div>
+			</a>
+		</div>
 			<div class="photo">
 				<a
 					href="https://songwhip.com/wrenevans/chi%E1%BB%81u-h%C3%B4m-%E1%BA%A5y-anh-th%E1%BA%A5y-m%C3%A0u-%C4%91%E1%BB%8F"

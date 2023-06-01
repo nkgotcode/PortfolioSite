@@ -65,13 +65,19 @@
 				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
 				out:fade={{ duration: 500, easing: backOut }}
 			>
-				📧 For enquiries: <a
+				📨 For enquiries: <a
 					href="mailto:me@itsnk.fyi"
 					in:fly={{ x: -20, duration: 1000, easing: quartInOut }}
 				>
 					me@itsnk.fyi
 				</a>
 			</h4>
+			<h5
+				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
+				out:fade={{ duration: 500, easing: backOut }}
+			>
+				📬 Sign up for emails:
+			</h5>
 		</div>
 	</div>
 {/if}
@@ -100,6 +106,7 @@
 	h2,
 	h3,
 	h4,
+	h5,
 	p {
 		align-self: center;
 		color: #f5f5f5;
@@ -113,7 +120,8 @@
 	h1,
 	h2,
 	h3,
-	h4 {
+	h4,
+	h5 {
 		font-size: 7vw;
 	}
 	.page-info {

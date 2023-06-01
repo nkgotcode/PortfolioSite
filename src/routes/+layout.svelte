@@ -53,14 +53,14 @@
 		margin-right: 2vw;
 	}
 	.navOpts:hover {
-		font-size: 3.5vw;
+		/* font-size: 3.5vw; */
 		color: rgb(179, 221, 242);
-		border-bottom-width: 1px;
-		border-bottom-style: solid;
+		border-top-width: 10px;
+		border-top-style: solid;
 	}
 	.active {
 		color: rgb(179, 221, 242);
-		text-decoration: overline;
+		text-decoration: underline;
 	}
 	:global(body) {
 		background-color: #000000;
