@@ -320,6 +320,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit,  minmax(600px, 1fr));
 		grid-gap: 8px;
+		margin-bottom: 7vw;
 	}
 	img {
 		-webkit-user-drag: none;
@@ -362,7 +363,7 @@
 	}
 
 	.title {
-		font-size: 1.8vw;
+		font-size: 3vw;
 		font-weight: 800;
 		align-self: center;
 		justify-content: center;

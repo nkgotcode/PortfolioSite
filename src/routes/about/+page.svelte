@@ -86,7 +86,9 @@
 	.bg {
 		background-image: url('/IMG_9037-Exposure 2.webp');
 		background-size: cover;
-		height: fit-content;
+		width: 100%;
+		height: 200%;
+		width: fit-content;
 	}
 	.content {
 		width: auto;

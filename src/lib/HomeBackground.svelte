@@ -19,6 +19,7 @@
 	}
 </script>
 
+<div class="container">
 <div
 	in:fly|global={{ y: 1000, duration: 800, easing: quartInOut }}
 	out:fade|global={{ duration: 500, easing: backOut }}
@@ -32,6 +33,7 @@
 	</h1>
 {/if}
 <slot />
+</div>
 
 <style>
 	:global(img) {
@@ -52,5 +54,8 @@
 		max-width: 100%;
 		height: auto;
 		padding-left: 40px;
+	}
+	div.container {
+		margin-bottom: 8vw;
 	}
 </style>

@@ -14,11 +14,11 @@
 		prevScrollPos = window.scrollY
         window.onscroll = () => {
             if (prevScrollPos > window.scrollY ) {
-				if (window.innerHeight + window.scrollY - document.body.clientHeight >= 0){			
-					hideNav = true
-			} else {
+			// 	if (window.innerHeight + window.scrollY - document.body.clientHeight >= 0){			
+			// 		hideNav = true
+			// } else {
                 	hideNav = false
-				}
+				// }
             }
 			else if (window.scrollY <= 0 && hideNav == false) {
 				hideNav = false

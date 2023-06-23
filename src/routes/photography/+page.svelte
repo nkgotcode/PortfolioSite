@@ -41,7 +41,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-
+<div class="container">
 	{#if y <= 0}
 		<div
 			class="landing"
@@ -150,7 +150,7 @@
 			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
-
+</div>
 
 <style>
 	svg {
@@ -182,5 +182,9 @@
 	div.landing {
 		display: block;
 		justify-self: center;
+
+	}
+	div.container {
+		margin-bottom: 9vw;
 	}
 </style>
