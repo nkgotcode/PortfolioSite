@@ -321,7 +321,7 @@
 		/* grid-template-columns: repeat(auto-fit,  300px); */
 		grid-template-columns: repeat(2,1fr);
 		grid-gap: 8px;
-		margin-bottom: 8vw;
+		margin-bottom: 10vw;
 	}
 	img {
 		-webkit-user-drag: none;
