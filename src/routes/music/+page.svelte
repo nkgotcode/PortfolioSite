@@ -319,9 +319,10 @@
 		width: 100%;
 		display: grid;
 		/* grid-template-columns: repeat(auto-fit,  300px); */
-		grid-template-columns: repeat(2,1fr);
+		grid-template-columns: repeat(minmax(min(2, 1fr)), max(3, 1fr));
 		grid-gap: 8px;
-		margin-bottom: 10vw;
+		/* height: auto; */
+		margin-bottom: 10vh;
 	}
 	img {
 		-webkit-user-drag: none;

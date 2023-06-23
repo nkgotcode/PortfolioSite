@@ -61,7 +61,7 @@
 					in:fly|global={{ x: -20, duration: 1000, easing: quartInOut }}>itsnk.fyi</a
 				>
 			</h3>
-			<h4
+			<!-- <h4
 				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
 				out:fade|global={{ duration: 500, easing: backOut }}
 			>
@@ -71,7 +71,7 @@
 				>
 					me@itsnk.fyi
 				</a>
-			</h4>
+			</h4> -->
 			<!-- <h5
 				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
 				out:fade|global={{ duration: 500, easing: backOut }}
@@ -89,7 +89,6 @@
 		/* width: 100%;
 		height: 100%; */
 		
-		margin-bottom: 10vw;
 	}
 	.content {
 		width: auto;
@@ -99,7 +98,7 @@
 		position: absolute;
 		background-image: url('/IMG_9037-Exposure 2.webp');
 		background-size: cover;
-		height: 100%;
+		height: auto;
 		/* background-color: #0f0f0f; */
 		/* margin-top: 70px; */
 	}

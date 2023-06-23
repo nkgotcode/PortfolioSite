@@ -185,6 +185,6 @@
 
 	}
 	div.container {
-		margin-bottom: 10vw;
+		margin-bottom: 10vh;
 	}
 </style>
