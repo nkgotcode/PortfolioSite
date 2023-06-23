@@ -41,19 +41,19 @@
 
 <svelte:window bind:scrollY={y} />
 
-{#if onLoad}
+
 	{#if y <= 0}
 		<div
 			class="landing"
-			in:blur={{ amount: 1000, duration: 1200, easing: quartInOut }}
-			out:fade={{ duration: 500, easing: backOut }}
+			in:blur|global={{ amount: 1000, duration: 1200, easing: quartInOut }}
+			out:fade|global={{ duration: 500, easing: backOut }}
 		>
-			<img src={image_content[0].src} alt="img{image_content[0].id}" in:send out:receive />
+			<img src={image_content[0].src} alt="img{image_content[0].id}" in:send|global out:receive|global />
 		</div>
-
+		{#if onLoad}
 		<div
-			in:fly={{ y: 300, duration: 1000, easing: quartInOut, opacity: 0.2 }}
-			out:fade={{ duration: 500, easing: backOut }}
+			in:fly|global={{ y: 300, duration: 1000, easing: quartInOut, opacity: 0.2 }}
+			out:fade|global={{ duration: 500, easing: backOut }}
 		>
 			<svg
 				version="1.1"
@@ -105,8 +105,9 @@
 			</svg>
 			<p>Chicago, IL</p>
 		</div>
+		{/if}
 	{/if}
-	<div in:send out:receive>
+	<div in:send|global out:receive|global>
 		{#if y > 0}
 			<PhotographyHeader />
 		{/if}
@@ -115,41 +116,41 @@
 		<img
 			src={image_content[2].src}
 			alt="img{image_content[2].id}"
-			in:fly={{ y: 20, duration: 100, easing: quartInOut }}
-			out:blur={{ amount: 2000, duration: 100, easing: backInOut }}
+			in:fly|global={{ y: 20, duration: 100, easing: quartInOut }}
+			out:blur|global={{ amount: 2000, duration: 100, easing: backInOut }}
 		/>
 		<img
 			src={image_content[3].src}
 			alt="img{image_content[3].id}"
-			in:fly={{ y: -20, duration: 1000, easing: quartInOut }}
-			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
+			in:fly|global={{ y: -20, duration: 1000, easing: quartInOut }}
+			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 600}
 		<img
 			src={image_content[4].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
+			in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 1000}
 		<img
 			src={image_content[5].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ y: -20, duration: 1000, easing: quartInOut }}
-			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
+			in:fly|global={{ y: -20, duration: 1000, easing: quartInOut }}
+			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 1400}
 		<img
 			src={image_content[6].src}
 			alt="img{image_content[4].id}"
-			in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-			out:blur={{ amount: 2000, duration: 800, easing: backInOut }}
+			in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
-{/if}
+
 
 <style>
 	svg {
@@ -162,10 +163,10 @@
 	}
 	img {
 		-webkit-user-drag: none;
-		width: auto;
-		display: block;
+		width: 100%;
+		/* display: block; */
 		height: auto;
-		max-width: 100%;
+		/* max-width: 100%; */
 	}
 	p {
 		color: #f5f5f5;
@@ -173,5 +174,13 @@
 		font-size: 7vw;
 		text-align: center;
 		font-display: swap;
+	}
+	div {
+		display: block;
+		justify-self: center;
+	}
+	div.landing {
+		display: block;
+		justify-self: center;
 	}
 </style>

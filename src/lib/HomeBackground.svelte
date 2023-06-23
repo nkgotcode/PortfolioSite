@@ -20,14 +20,14 @@
 </script>
 
 <div
-	in:fly={{ y: 1000, duration: 800, easing: quartInOut }}
-	out:fade={{ duration: 500, easing: backOut }}
+	in:fly|global={{ y: 1000, duration: 800, easing: quartInOut }}
+	out:fade|global={{ duration: 500, easing: backOut }}
 	on:introend={loadMenu}
 >
 	<Image {src} />
 </div>
 {#if img_load}
-	<h1 in:fly={{ y: 50, duration: 700 }} out:fly={{ y: 700, duration: 1000, opacity: 0.2 }}>
+	<h1 in:fly|global={{ y: 50, duration: 700 }} out:fly|global={{ y: 700, duration: 1000, opacity: 0.2 }}>
 		Hello there, itsnk
 	</h1>
 {/if}

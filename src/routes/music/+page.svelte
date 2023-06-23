@@ -29,20 +29,27 @@
 	<div class="background">
 		<div
 			class="container"
-			in:fly={{ y: 700, duration: 1800, easing: expoInOut }}
-			out:fade={{ duration: 500, easing: backOut }}
+			in:fly|global={{ y: 700, duration: 1800, easing: expoInOut }}
+			out:fade|global={{ duration: 500, easing: backOut }}
 		>
-		<div class="photo">
-			<a
-				href="https://umvn.lnk.to/vietkieu"
-			>
-				<img src={'/album/VK.webp'} alt="Việt Kiều - Single" />
-				<div class="overlay">
-					<div class="title">Việt Kiều</div>
-					<p class="description" />
-				</div>
-			</a>
-		</div>
+			<div class="photo">
+				<a href="https://umvn.lnk.to/gonpho">
+					<img src={'/album/Gonpho.webp'} alt="Gơn Phố - Single" />
+					<div class="overlay">
+						<div class="title">Gơn Phố</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
+				<a href="https://umvn.lnk.to/vietkieu">
+					<img src={'/album/VK.webp'} alt="Việt Kiều - Single" />
+					<div class="overlay">
+						<div class="title">Việt Kiều</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
 			<div class="photo">
 				<a
 					href="https://songwhip.com/wrenevans/chi%E1%BB%81u-h%C3%B4m-%E1%BA%A5y-anh-th%E1%BA%A5y-m%C3%A0u-%C4%91%E1%BB%8F"
@@ -91,7 +98,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/v%C5%A9thanhv%C3%A2n/after-party">
-					<img src={'/album/epcover-05.webp'} alt="After Party EP" />
+					<img src={'/album/epcover-05 800x800.webp'} alt="After Party EP" />
 					<div class="overlay">
 						<div class="title">After Party EP</div>
 						<p class="description" />
@@ -100,7 +107,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/312">
-					<img src={'/album/@312 no text.webp'} alt="312 EP" />
+					<img src={'/album/@312 no text 800x800.webp'} alt="312 EP" />
 					<div class="overlay">
 						<div class="title">312 EP</div>
 						<p class="description" />
@@ -109,7 +116,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/ahh2021">
-					<img src={'/album/IMG_9037-Exposure 2 2048x2048.jpg'} alt="Ahh - Single" />
+					<img src={'/album/IMG_9037-Exposure 2 800x800.jpg'} alt="Ahh - Single" />
 					<div class="overlay">
 						<div class="title">Ahh</div>
 						<p class="description" />
@@ -311,17 +318,23 @@
 	.container {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fit,  minmax(600px, 1fr));
 		grid-gap: 8px;
 	}
 	img {
 		-webkit-user-drag: none;
 		margin: 0;
 		display: block;
-		max-width: 100%;
+		/* max-width: 100%; */
+		width: 100%;
 	}
 	.photo {
 		position: relative;
+		justify-items: center;
+		justify-self: center;
+		min-width: 200px;
+		width: 600px;
+		height: 600px;
 	}
 	.overlay {
 		position: absolute;
@@ -349,7 +362,7 @@
 	}
 
 	.title {
-		font-size: 20px;
+		font-size: 1.8vw;
 		font-weight: 800;
 		align-self: center;
 		justify-content: center;

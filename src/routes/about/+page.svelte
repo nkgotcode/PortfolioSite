@@ -26,17 +26,17 @@
 {#if onLoad}
 	<div
 		class="bg"
-		in:blur={{ amount: 1000, duration: 300, easing: quartInOut }}
-		out:fade={{ duration: 500, easing: backOut }}
+		in:blur|global={{ amount: 1000, duration: 300, easing: quartInOut }}
+		out:fade|global={{ duration: 500, easing: backOut }}
 	>
-		<div class="content" out:fade={{ duration: 500, easing: backOut }}>
+		<div class="content" out:fade|global={{ duration: 500, easing: backOut }}>
 			<h1
-				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-				out:fade={{ duration: 500, easing: backOut }}
+				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+				out:fade|global={{ duration: 500, easing: backOut }}
 			>
 				👋 About me
 			</h1>
-			<p class="my-info" in:fly={{ x: 20, duration: 1000, easing: quartInOut }}>
+			<p class="my-info" in:fly|global={{ x: 20, duration: 1000, easing: quartInOut }}>
 				My name is Lê Nam Khánh. I also go by my initials, NK.
 				<br />
 				<br />
@@ -47,37 +47,37 @@
 				course, coding.
 			</p>
 			<br />
-			<h2 in:fly={{ y: 20, duration: 1000, easing: quartInOut }}>📄 About this page</h2>
-			<p class="page-info" in:fly={{ x: -100, duration: 1000, easing: quartInOut }}>
+			<h2 in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}>📄 About this page</h2>
+			<p class="page-info" in:fly|global={{ x: -100, duration: 1000, easing: quartInOut }}>
 				Built with <a href="https://kit.svelte.dev">SvelteKit</a>. The page you're looking at is
 				purely static HTML.
 			</p>
 			<h3
-				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-				out:fade={{ duration: 500, easing: backOut }}
+				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+				out:fade|global={{ duration: 500, easing: backOut }}
 			>
 				📸 Instagram: <a
 					href="https://instagram.com/itsnk.fyi"
-					in:fly={{ x: -20, duration: 1000, easing: quartInOut }}>itsnk.fyi</a
+					in:fly|global={{ x: -20, duration: 1000, easing: quartInOut }}>itsnk.fyi</a
 				>
 			</h3>
 			<h4
-				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-				out:fade={{ duration: 500, easing: backOut }}
+				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+				out:fade|global={{ duration: 500, easing: backOut }}
 			>
 				📨 For enquiries: <a
 					href="mailto:me@itsnk.fyi"
-					in:fly={{ x: -20, duration: 1000, easing: quartInOut }}
+					in:fly|global={{ x: -20, duration: 1000, easing: quartInOut }}
 				>
 					me@itsnk.fyi
 				</a>
 			</h4>
-			<h5
-				in:fly={{ y: 20, duration: 1000, easing: quartInOut }}
-				out:fade={{ duration: 500, easing: backOut }}
+			<!-- <h5
+				in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
+				out:fade|global={{ duration: 500, easing: backOut }}
 			>
 				📬 Sign up for emails:
-			</h5>
+			</h5> -->
 		</div>
 	</div>
 {/if}
