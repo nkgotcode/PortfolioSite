@@ -318,24 +318,23 @@
 	.container {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit,  minmax(600px, 1fr));
+		/* grid-template-columns: repeat(auto-fit,  300px); */
+		grid-template-columns: repeat(2,1fr);
 		grid-gap: 8px;
-		margin-bottom: 7vw;
+		margin-bottom: 8vw;
 	}
 	img {
 		-webkit-user-drag: none;
 		margin: 0;
 		display: block;
-		/* max-width: 100%; */
 		width: 100%;
 	}
 	.photo {
 		position: relative;
 		justify-items: center;
 		justify-self: center;
-		min-width: 200px;
-		width: 600px;
-		height: 600px;
+		max-width: 600px;
+		max-height: 600px;
 	}
 	.overlay {
 		position: absolute;

@@ -84,19 +84,24 @@
 
 <style>
 	.bg {
-		background-image: url('/IMG_9037-Exposure 2.webp');
-		background-size: cover;
+		/* background-image: url('/IMG_9037-Exposure 2.webp');
+		background-size: cover; */
 		width: 100%;
-		height: 200%;
-		width: fit-content;
+		height: 100%;
+		
+		margin-bottom: 5vw;
 	}
 	.content {
 		width: auto;
 		max-width: var(--column-width);
 		color: #faebd7;
-		margin-left: 50px;
-		margin-right: 50px;
-		margin-top: 70px;
+		top: 0;
+		position: absolute;
+		background-image: url('/IMG_9037-Exposure 2.webp');
+		background-size: cover;
+		height: 100%;
+		/* background-color: #0f0f0f; */
+		/* margin-top: 70px; */
 	}
 	a {
 		font-size: 4vw;
@@ -110,6 +115,8 @@
 	h4,
 	h5,
 	p {
+		margin-left: 50px;
+		margin-right: 50px;
 		align-self: center;
 		color: #f5f5f5;
 		font-family: 'Raleway', sans-serif;

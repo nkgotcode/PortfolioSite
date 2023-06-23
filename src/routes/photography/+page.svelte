@@ -11,7 +11,7 @@
 	import PhotographyHeader from '$lib/PhotographyHeader.svelte';
 
 	const image_content = [
-		{ src: '/landscape pic 2048x2048.webp', id: 1 },
+		{ src: '/landscape pic 1000x1000.webp', id: 1 },
 		{ src: '/dclassic 2021-05-19 124835.997.webp', id: 2 },
 		{ src: '/hoga 2021-06-01 160224.728.webp', id: 3 },
 		{ src: '/hoga 2021-10-03 215931.550.webp', id: 4 },
