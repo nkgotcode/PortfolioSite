@@ -3,7 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { backOut, quartInOut } from 'svelte/easing';
 	import { menu } from '$lib/MenuLoad.js';
-	import Image from 'svelte-image';
+	// import Image from 'svelte-image';
 	import { lazyLoad } from '$lib/LazyLoad.js';
 
 	let src = '/@312 no text.webp';

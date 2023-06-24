@@ -11,6 +11,7 @@
 	<img
 		src={image_content[1].src}
 		alt="img{image_content[1].id}"
+		loading="lazy"
 		in:fly|global={{ delay: 200, y: 200, duration: 500, easing: quartInOut }}
 		out:blur|global={{ amount: 2000, duration: 800, easing: quartOut }}
 	/>

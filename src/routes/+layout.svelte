@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import {onMount} from 'svelte'
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	const navItems = [
 		{ label: 'HOME', href: '/' },
@@ -8,27 +8,25 @@
 		{ label: 'PHOTOGRAPHY', href: '/photography' },
 		{ label: 'ABOUT', href: '/about' }
 	];
-    let hideNav = false
-	let prevScrollPos
-    onMount(() => {
-		prevScrollPos = window.scrollY
-        window.onscroll = () => {
-            if (prevScrollPos > window.scrollY ) {
-			// 	if (window.innerHeight + window.scrollY - document.body.clientHeight >= 0){			
-			// 		hideNav = true
-			// } else {
-                	hideNav = false
+	let hideNav = false;
+	let prevScrollPos;
+	onMount(() => {
+		prevScrollPos = window.scrollY;
+		window.onscroll = () => {
+			if (prevScrollPos > window.scrollY) {
+				// 	if (window.innerHeight + window.scrollY - document.body.clientHeight >= 0){
+				// 		hideNav = true
+				// } else {
+				hideNav = false;
 				// }
-            }
-			else if (window.scrollY <= 0 && hideNav == false) {
-				hideNav = false
+			} else if (window.scrollY <= 0 && hideNav == false) {
+				hideNav = false;
+			} else {
+				hideNav = true;
 			}
-			else {
-                hideNav = true
-            }
-			prevScrollPos = window.scrollY
-        }
-    })
+			prevScrollPos = window.scrollY;
+		};
+	});
 </script>
 
 <nav class:scrolled={hideNav}>
@@ -57,24 +55,25 @@
 	}
 	nav {
 		overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
-  margin: 0;
-  background-color: #000000;
-  transition: 0.17s ease;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+		margin: 0;
+		background-color: #000000;
+		transition: 0.17s ease;
 	}
 	.scrolled {
-        transform: translate(0,calc(800%))
-    }
+		transform: translate(0, calc(800%));
+	}
 	ul {
 		display: flex;
 		list-style: none;
 		justify-content: center;
 	}
 	li {
-		margin-right: 2vw;
+		/* margin-right: 2vw; */
+		justify-content: center;
 	}
 	.navOpts:hover {
 		/* font-size: 3.5vw; */
