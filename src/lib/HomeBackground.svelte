@@ -14,7 +14,7 @@
 		out:fade|global={{ duration: 500, easing: backOut }}
 		on:introend={loadImage}
 	>
-		<img loading="lazy" {src} alt="img" />
+		<img {src} alt="img" />
 	</div>
 	{#if img_load}
 		<h1
