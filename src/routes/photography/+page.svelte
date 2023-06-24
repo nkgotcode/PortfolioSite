@@ -49,9 +49,9 @@
 			out:fade|global={{ duration: 500, easing: backOut }}
 		>
 			<img
+				loading="lazy"
 				src={image_content[0].src}
 				alt="img{image_content[0].id}"
-				loading="lazy"
 				in:send|global
 				out:receive|global
 			/>
@@ -120,43 +120,43 @@
 	</div>
 	{#if y >= 300}
 		<img
+			loading="lazy"
 			src={image_content[2].src}
 			alt="img{image_content[2].id}"
-			loading="lazy"
 			in:fly|global={{ y: 20, duration: 100, easing: quartInOut }}
 			out:blur|global={{ amount: 2000, duration: 100, easing: backInOut }}
 		/>
 		<img
+			loading="lazy"
 			src={image_content[3].src}
 			alt="img{image_content[3].id}"
-			loading="lazy"
 			in:fly|global={{ y: -20, duration: 1000, easing: quartInOut }}
 			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 600}
 		<img
+			loading="lazy"
 			src={image_content[4].src}
 			alt="img{image_content[4].id}"
-			loading="lazy"
 			in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
 			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 1000}
 		<img
+			loading="lazy"
 			src={image_content[5].src}
 			alt="img{image_content[5].id}"
-			loading="lazy"
 			in:fly|global={{ y: -20, duration: 1000, easing: quartInOut }}
 			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>
 	{/if}
 	{#if y >= 1400}
 		<img
+			loading="lazy"
 			src={image_content[6].src}
 			alt="img{image_content[6].id}"
-			loading="lazy"
 			in:fly|global={{ y: 20, duration: 1000, easing: quartInOut }}
 			out:blur|global={{ amount: 2000, duration: 800, easing: backInOut }}
 		/>

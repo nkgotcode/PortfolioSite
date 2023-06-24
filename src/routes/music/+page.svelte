@@ -34,7 +34,7 @@
 		>
 			<div class="photo">
 				<a href="https://umvn.lnk.to/gonpho">
-					<img src={'/album/Gonpho.webp'} alt="Gơn Phố - Single" loading="lazy" />
+					<img loading="lazy" src={'/album/Gonpho.webp'} alt="Gơn Phố - Single" />
 					<div class="overlay">
 						<div class="title">Gơn Phố</div>
 						<p class="description" />
@@ -43,7 +43,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://umvn.lnk.to/vietkieu">
-					<img src={'/album/VK.webp'} alt="Việt Kiều - Single" loading="lazy" />
+					<img loading="lazy" src={'/album/VK.webp'} alt="Việt Kiều - Single" />
 					<div class="overlay">
 						<div class="title">Việt Kiều</div>
 						<p class="description" />
@@ -54,7 +54,7 @@
 				<a
 					href="https://songwhip.com/wrenevans/chi%E1%BB%81u-h%C3%B4m-%E1%BA%A5y-anh-th%E1%BA%A5y-m%C3%A0u-%C4%91%E1%BB%8F"
 				>
-					<img src={'/album/CHAATMD.webp'} alt="Chiều Hôm Ấy Anh Thấy Màu Đỏ EP" loading="lazy"/>
+					<img loading="lazy" src={'/album/CHAATMD.webp'} alt="Chiều Hôm Ấy Anh Thấy Màu Đỏ EP" />
 					<div class="overlay">
 						<div class="title">Chiều Hôm Ấy Anh Thấy Màu Đỏ EP</div>
 						<p class="description" />
@@ -67,7 +67,11 @@
             https://soundcloud.com/itsnk/all-i-wanna-do-itsnk-x-duy-tuan-edit?si=94500f28a87c4b9fbb1110fc0a4d6495&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
             "
 				>
-					<img src={'/album/alliwannadoflip.webp'} alt="All I Wanna Do (itsnk x Duy Tuan Edit)" loading="lazy" />
+					<img
+						loading="lazy"
+						src={'/album/alliwannadoflip.webp'}
+						alt="All I Wanna Do (itsnk x Duy Tuan Edit)"
+					/>
 					<div class="overlay">
 						<div class="title">All I Wanna Do (flip)</div>
 						<p class="description" />
@@ -78,7 +82,7 @@
 				<a
 					href="https://soundcloud.com/itsnk/4x4-spring-22-edition?si=94500f28a87c4b9fbb1110fc0a4d6495&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 				>
-					<img src={'/album/4x4spring2022.webp'} alt="4x4 Spring 2022 mix" loading="lazy"/>
+					<img loading="lazy" src={'/album/4x4spring2022.webp'} alt="4x4 Spring 2022 mix" />
 					<div class="overlay">
 						<div class="title">4x4 Spring 2022 mix</div>
 						<p class="description" />
@@ -89,7 +93,7 @@
 				<a
 					href="https://soundcloud.com/itsnk/4x4-winter-21-edition?si=94500f28a87c4b9fbb1110fc0a4d6495&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 				>
-					<img src={'/album/4x4winter2021.webp'} alt="4x4 Winter 2021 mix" loading="lazy"/>
+					<img loading="lazy" src={'/album/4x4winter2021.webp'} alt="4x4 Winter 2021 mix" />
 					<div class="overlay">
 						<div class="title">4x4 Winter 2021 mix</div>
 						<p class="description" />
@@ -98,7 +102,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/v%C5%A9thanhv%C3%A2n/after-party">
-					<img src={'/album/epcover-05 800x800.webp'} alt="After Party EP" loading="lazy"/>
+					<img loading="lazy" src={'/album/epcover-05 800x800.webp'} alt="After Party EP" />
 					<div class="overlay">
 						<div class="title">After Party EP</div>
 						<p class="description" />
@@ -107,7 +111,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/312">
-					<img src={'/album/@312 no text 800x800.webp'} alt="312 EP" loading="lazy"/>
+					<img loading="lazy" src={'/album/@312 no text 800x800.webp'} alt="312 EP" />
 					<div class="overlay">
 						<div class="title">312 EP</div>
 						<p class="description" />
@@ -116,7 +120,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/ahh2021">
-					<img src={'/album/IMG_9037-Exposure 2 800x800.jpg'} alt="Ahh - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/IMG_9037-Exposure 2 800x800.jpg'} alt="Ahh - Single" />
 					<div class="overlay">
 						<div class="title">Ahh</div>
 						<p class="description" />
@@ -127,7 +131,7 @@
 				<a
 					href="https://soundcloud.com/itsnk/4x4-in-chicago-summer-20-edition?si=94500f28a87c4b9fbb1110fc0a4d6495&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 				>
-					<img src={'/album/4x4summer2020.webp'} alt="4x4 Summer 2020 mix" loading="lazy"/>
+					<img loading="lazy" src={'/album/4x4summer2020.webp'} alt="4x4 Summer 2020 mix" />
 					<div class="overlay">
 						<div class="title">4x4 Summer 2020 mix</div>
 						<p class="description" />
@@ -136,7 +140,11 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/hairan/control2020">
-					<img src={'/album/Control (feat. Lu & itsnk) - Single.webp'} alt="Control - Single" loading="lazy"/>
+					<img
+						loading="lazy"
+						src={'/album/Control (feat. Lu & itsnk) - Single.webp'}
+						alt="Control - Single"
+					/>
 					<div class="overlay">
 						<div class="title">Control</div>
 						<p class="description" />
@@ -145,7 +153,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/tsl2/l%C3%A0m-vi%E1%BB%87c">
-					<img src={'/album/lamviec.webp'} alt="Làm Việc - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/lamviec.webp'} alt="Làm Việc - Single" />
 					<div class="overlay">
 						<div class="title">Làm Việc</div>
 						<p class="description" />
@@ -154,7 +162,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/16typh/self-love">
-					<img src={'/album/self love.webp'} alt="Self Love - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/self love.webp'} alt="Self Love - Single" />
 					<div class="overlay">
 						<div class="title">Self Love</div>
 						<p class="description" />
@@ -163,7 +171,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/khoawzzzy/chuckies-cypher">
-					<img src={'/album/chuckiescypher.webp'} alt="Chuckies Cypher - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/chuckiescypher.webp'} alt="Chuckies Cypher - Single" />
 					<div class="overlay">
 						<div class="title">Chuckies Cypher</div>
 						<p class="description" />
@@ -172,7 +180,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/dumb-me">
-					<img src={'/album/DumbMe.webp'} alt="Dumb Mê - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/DumbMe.webp'} alt="Dumb Mê - Single" />
 					<div class="overlay">
 						<div class="title">Dumb Mê</div>
 						<p class="description" />
@@ -181,7 +189,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://on.soundcloud.com/xs8g7">
-					<img src={'/album/chientinhflip.webp'} alt="Chiện Tình (itsnk flip)" loading="lazy"/>
+					<img loading="lazy" src={'/album/chientinhflip.webp'} alt="Chiện Tình (itsnk flip)" />
 					<div class="overlay">
 						<div class="title">Chiện Tình (itsnk flip)</div>
 						<p class="description" />
@@ -193,9 +201,9 @@
 					href="https://songwhip.com/haisam/th%C3%B4i-ra-v%C6%B0%E1%BB%9Dn-n%E1%BA%B1m-cho-quen-v%E1%BB%9Bi-m%C3%B9i-%C4%91%E1%BA%A5t"
 				>
 					<img
+						loading="lazy"
 						src={'/album/trvncqvmd.webp'}
 						alt="Thôi ra vườn nằm cho quen với mùi đất. - Single"
-						loading="lazy"
 					/>
 					<div class="overlay">
 						<div class="title">Thôi ra vườn nằm cho quen với mùi đất.</div>
@@ -205,7 +213,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/prettyxix2/go-home">
-					<img src={'/album/gohome.webp'} alt="Go Home - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/gohome.webp'} alt="Go Home - Single" />
 					<div class="overlay">
 						<div class="title">Go Home</div>
 						<p class="description" />
@@ -214,7 +222,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/nothing-left">
-					<img src={'/album/IMG_5566.jpg'} alt="Nothing Left - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/IMG_5566.jpg'} alt="Nothing Left - Single" />
 					<div class="overlay">
 						<div class="title">Nothing Left</div>
 						<p class="description" />
@@ -223,7 +231,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/i-fall">
-					<img src={'/album/Ifall.webp'} alt="I Fall - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Ifall.webp'} alt="I Fall - Single" />
 					<div class="overlay">
 						<div class="title">I Fall</div>
 						<p class="description" />
@@ -232,7 +240,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/davangjam-canvas">
-					<img src={'/album/Davangjam.webp'} alt="Davangjam - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Davangjam.webp'} alt="Davangjam - Single" />
 					<div class="overlay">
 						<div class="title">Davangjam</div>
 						<p class="description" />
@@ -241,7 +249,11 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/hello-foolish-extended-mix">
-					<img src={'/album/HelloExtended.webp'} alt="Hello (Extended Mix) - Single" loading="lazy"/>
+					<img
+						loading="lazy"
+						src={'/album/HelloExtended.webp'}
+						alt="Hello (Extended Mix) - Single"
+					/>
 					<div class="overlay">
 						<div class="title">Hello (Extended Mix)</div>
 						<p class="description" />
@@ -250,7 +262,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/lilwuyn/freedom-writers">
-					<img src={'/album/timeline.webp'} alt="Freedom Writers - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/timeline.webp'} alt="Freedom Writers - Single" />
 					<div class="overlay">
 						<div class="title">Freedom Writers</div>
 						<p class="description" />
@@ -259,7 +271,11 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/m%E1%BB%99tfile%C3%A2mthanhnh%E1%BB%8Fmp3">
-					<img src={'/album/1fileamthanhnho.webp'} alt="Một File Âm Thanh Nhỏ.mp3 - Single" loading="lazy"/>
+					<img
+						loading="lazy"
+						src={'/album/1fileamthanhnho.webp'}
+						alt="Một File Âm Thanh Nhỏ.mp3 - Single"
+					/>
 					<div class="overlay">
 						<div class="title">một file âm thanh nhỏ.mp3</div>
 						<p class="description" />
@@ -268,7 +284,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/hello-foolish">
-					<img src={'/album/Hello.webp'} alt="Hello - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Hello.webp'} alt="Hello - Single" />
 					<div class="overlay">
 						<div class="title">Hello</div>
 						<p class="description" />
@@ -277,7 +293,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/amour">
-					<img src={'/album/Amour.webp'} alt="Amour - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Amour.webp'} alt="Amour - Single" />
 					<div class="overlay">
 						<div class="title">Amour</div>
 						<p class="description" />
@@ -286,7 +302,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/one-day-stand">
-					<img src={'/album/onedaystand.webp'} alt="One Day Stand - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/onedaystand.webp'} alt="One Day Stand - Single" />
 					<div class="overlay">
 						<div class="title">One Day Stand</div>
 						<p class="description" />
@@ -295,7 +311,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/thoughts">
-					<img src={'/album/Thoughts.webp'} alt="Thoughts - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Thoughts.webp'} alt="Thoughts - Single" />
 					<div class="overlay">
 						<div class="title">Thoughts</div>
 						<p class="description" />
@@ -304,7 +320,7 @@
 			</div>
 			<div class="photo">
 				<a href="https://songwhip.com/itsnk/furnish2017">
-					<img src={'/album/Furnish.webp'} alt="Furnish - Single" loading="lazy"/>
+					<img loading="lazy" src={'/album/Furnish.webp'} alt="Furnish - Single" />
 					<div class="overlay">
 						<div class="title">Furnish</div>
 						<p class="description" />

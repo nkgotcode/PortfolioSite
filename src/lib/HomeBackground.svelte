@@ -1,35 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
 	import { backOut, quartInOut } from 'svelte/easing';
-	import { menu } from '$lib/MenuLoad.js';
-	// import Image from 'svelte-image';
-	import { lazyLoad } from '$lib/LazyLoad.js';
-
 	let src = '/@312 no text.webp';
-	let onLoad = false;
 	let img_load = false;
-	const imgUrl = new URL(src, import.meta.url).href;
-
-	onMount(() => {
-		setTimeout(() => (onLoad = true));
-	});
-
-	function loadMenu() {
-		menu.set(true);
+	function loadImage() {
 		img_load = true;
-	}
-
-	// grab some place holder images
-	async function fetchData() {
-		const res = await fetch(imgUrl);
-		const data = await res.json();
-
-		if (res.ok) {
-			return data;
-		} else {
-			throw new Error(data);
-		}
 	}
 </script>
 
@@ -37,18 +12,9 @@
 	<div
 		in:fly|global={{ y: 1000, duration: 800, easing: quartInOut }}
 		out:fade|global={{ duration: 500, easing: backOut }}
-		on:introend={loadMenu}
+		on:introend={loadImage}
 	>
-		<img {src} loading="lazy" alt="img" />
-		<!-- {#await fetchData()} -->
-		<!-- <Image {src} /> -->
-		<!-- <img {src} alt="placeholder" /> -->
-		<!-- <p>...Loading...</p>
-		{:then image}
-			<img use:lazyLoad={imgUrl} />
-		{:catch e}
-			<p style="color: red">{e.message}</p>
-		{/await} -->
+		<img loading="lazy" {src} alt="img" />
 	</div>
 	{#if img_load}
 		<h1
