@@ -33,6 +33,15 @@
 			out:fade|global={{ duration: 500, easing: backOut }}
 		>
 			<div class="photo">
+				<a href="https://umvn.lnk.to/callme">
+					<img src={'/album/CallMe.webp'} alt="Call Me - Single" />
+					<div class="overlay">
+						<div class="title">Call Me</div>
+						<p class="description" />
+					</div>
+				</a>
+			</div>
+			<div class="photo">
 				<a href="https://umvn.lnk.to/gonpho">
 					<img src={'/album/Gonpho.webp'} alt="Gơn Phố - Single" />
 					<div class="overlay">
